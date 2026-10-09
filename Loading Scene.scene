@@ -1,0 +1,496 @@
+id: 3418633750
+name: Loading Scene
+scene:
+  backgroundColor: [0, 0, 0, 0]
+  shadowQuality: low
+  meshLodEnabled: false
+  meshLodThreshold: 1
+  depthPrepassEnabled: false
+  lightState: off
+  globalIlluminationIntensity: 0.1
+  globalIlluminationColor: [1, 1, 1]
+  ambientLight2DIntensity: 1
+  ambientLight2DColor: [1, 1, 1]
+  shadow2DQuality: low
+  ssaoEnabled: false
+  ssaoRadius: 0.5
+  ssaoIntensity: 1
+  ssaoBias: 0.025
+  ssrEnabled: false
+  ssrMaxDistance: 8
+  ssrThickness: 0.5
+  ssrMaxSteps: 48
+  ssrIntensity: 1
+  ssrBlur: 0
+  gravity2D: [0, -9.81]
+  gravity3D: [0, -9.81, 0]
+  fixedResolutionEnabled: false
+  fixedResolutionWidth: 640
+  fixedResolutionHeight: 360
+  fixedResolutionFilter: nearest
+  enableUIEvents: not_set
+sceneType: scene_ui
+mainCamera: 0
+maxValues:
+  maxSubmeshes: 0
+  maxTilemapTilesRect: 0
+  maxTilemapTiles: 0
+  maxExternalBuffers: 0
+  maxSpriteFrames: 0
+  maxBones: 0
+  maxShapes2D: 0
+  maxShapePoints2D: 0
+  maxShapes3D: 0
+  maxShapeVertices3D: 0
+  maxShapeIndices3D: 0
+shaderKeys:
+  - type: ui
+    properties: 2
+  - type: ui
+    properties: 8
+  - type: ui
+    properties: 9
+  - type: blit
+entities:
+  - type: Entity
+    entity: 1001
+    name: Background
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      ui:
+        primitiveType: triangles
+        vertexCount: 54
+        aabb:
+          min: [0, 0, 0]
+          max: [1280, 720, 0]
+        worldAABB:
+          min: [0, 0, 0]
+          max: [1280, 720, 0]
+        texture: ~
+        color: [0.034339808, 0.019382361, 0.011612245, 1]
+        automaticFlipY: true
+        flipY: false
+        pointerMoved: false
+        focused: false
+      uilayout:
+        width: 1280
+        height: 720
+        anchorPointLeft: 0
+        anchorPointTop: 0
+        anchorPointRight: 1
+        anchorPointBottom: 1
+        anchorOffsetLeft: 0
+        anchorOffsetTop: 0
+        anchorOffsetRight: 0
+        anchorOffsetBottom: 0
+        positionOffset: [0, 0]
+        pivot: [0, 0]
+        anchorPreset: FULL_LAYOUT
+        usingAnchors: true
+        panel: 0
+        containerBoxIndex: -1
+        scissor: [50, 50, 994, 571]
+        ignoreScissor: false
+        ignoreEvents: true
+      image:
+        patchMarginLeft: 0
+        patchMarginRight: 0
+        patchMarginTop: 0
+        patchMarginBottom: 0
+        textureScaleFactor: 0
+  - type: Entity
+    entity: 1002
+    name: Panel
+    components:
+      transform:
+        position: [380, 265, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [380, 265, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [380, 265, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [380, 265, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      ui:
+        primitiveType: triangles
+        vertexCount: 54
+        aabb:
+          min: [0, 0, 0]
+          max: [520, 190, 0]
+        worldAABB:
+          min: [380, 265, 0]
+          max: [900, 455, 0]
+        texture:
+          textureType: 2D
+          source: path
+          path: ui/panel_brown.png
+          minFilter: linear
+          magFilter: linear
+          wrapU: repeat
+          wrapV: repeat
+          releaseDataAfterLoad: true
+        color: [1, 1, 1, 1]
+        automaticFlipY: true
+        flipY: false
+        pointerMoved: false
+        focused: false
+      uilayout:
+        width: 520
+        height: 190
+        anchorPointLeft: 0.5
+        anchorPointTop: 0.5
+        anchorPointRight: 0.5
+        anchorPointBottom: 0.5
+        anchorOffsetLeft: -260
+        anchorOffsetTop: -95
+        anchorOffsetRight: 260
+        anchorOffsetBottom: 95
+        positionOffset: [0, 0]
+        pivot: [0, 0]
+        anchorPreset: CENTER
+        usingAnchors: true
+        panel: 0
+        containerBoxIndex: -1
+        scissor: [446, 331, 488, 157.99997]
+        ignoreScissor: false
+        ignoreEvents: true
+      image:
+        patchMarginLeft: 16
+        patchMarginRight: 16
+        patchMarginTop: 16
+        patchMarginBottom: 16
+        textureScaleFactor: 0
+    children:
+      - type: Entity
+        entity: 1003
+        name: Title
+        components:
+          transform:
+            position: [196, 26, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [576, 291, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [196, 26, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [576, 291, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          ui:
+            primitiveType: triangles
+            vertexCount: 42
+            aabb:
+              min: [0, 0, 0]
+              max: [129, 43.531055, 0]
+            worldAABB:
+              min: [576, 291, 0]
+              max: [705, 334.53107, 0]
+            texture:
+              textureType: 2D
+              source: id
+              id: fonts/LilitaOne-Regular.ttf|44#12
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: false
+            color: [1, 0.9046612, 0.73046076, 1]
+            automaticFlipY: true
+            flipY: false
+            pointerMoved: false
+            focused: false
+          uilayout:
+            width: 129
+            height: 44
+            anchorPointLeft: 0.5
+            anchorPointTop: 0
+            anchorPointRight: 0.5
+            anchorPointBottom: 0
+            anchorOffsetLeft: -64
+            anchorOffsetTop: 0
+            anchorOffsetRight: 65
+            anchorOffsetBottom: 44
+            positionOffset: [0, 26]
+            pivot: [0, 0]
+            anchorPreset: CENTER_TOP
+            usingAnchors: true
+            panel: 0
+            containerBoxIndex: -1
+            scissor: [446, 331, 488, 157.99997]
+            ignoreScissor: true
+            ignoreEvents: true
+          text:
+            font: [fonts/LilitaOne-Regular.ttf]
+            text: Loading
+            fontSize: 44
+            multiline: false
+            maxTextSize: 100
+            fixedWidth: false
+            fixedHeight: false
+            pivotBaseline: false
+            pivotCentered: false
+      - type: Entity
+        entity: 1004
+        name: Bar
+        components:
+          transform:
+            position: [50, 100, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [430, 365, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [50, 100, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [430, 365, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          ui:
+            primitiveType: triangles
+            vertexCount: 54
+            aabb:
+              min: [0, 0, 0]
+              max: [420, 22, 0]
+            worldAABB:
+              min: [430, 365, 0]
+              max: [850, 387, 0]
+            texture:
+              textureType: 2D
+              source: path
+              path: ui/bar_back.png
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            color: [1, 1, 1, 1]
+            automaticFlipY: true
+            flipY: false
+            pointerMoved: false
+            focused: false
+          uilayout:
+            width: 420
+            height: 22
+            anchorPointLeft: 0.5
+            anchorPointTop: 0
+            anchorPointRight: 0.5
+            anchorPointBottom: 0
+            anchorOffsetLeft: -210
+            anchorOffsetTop: 0
+            anchorOffsetRight: 210
+            anchorOffsetBottom: 22
+            positionOffset: [0, 100]
+            pivot: [0, 0]
+            anchorPreset: CENTER_TOP
+            usingAnchors: true
+            panel: 0
+            containerBoxIndex: -1
+            scissor: [489, 415.00003, 402, 22]
+            ignoreScissor: true
+            ignoreEvents: true
+          image:
+            patchMarginLeft: 9
+            patchMarginRight: 9
+            patchMarginTop: 0
+            patchMarginBottom: 0
+            textureScaleFactor: 0
+        children:
+          - type: Entity
+            entity: 1005
+            name: Fill
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [430, 365, 0]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [1, 1, 1]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [430, 365, 0, 1]]
+                normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              ui:
+                primitiveType: triangles
+                vertexCount: 54
+                aabb:
+                  min: [0, 0, 0]
+                  max: [420, 22, 0]
+                worldAABB:
+                  min: [430, 365, 0]
+                  max: [850, 387, 0]
+                texture:
+                  textureType: 2D
+                  source: path
+                  path: ui/bar_green.png
+                  minFilter: linear
+                  magFilter: linear
+                  wrapU: repeat
+                  wrapV: repeat
+                  releaseDataAfterLoad: true
+                color: [1, 1, 1, 1]
+                automaticFlipY: true
+                flipY: false
+                pointerMoved: false
+                focused: false
+              uilayout:
+                width: 420
+                height: 22
+                anchorPointLeft: 0
+                anchorPointTop: 0
+                anchorPointRight: 0
+                anchorPointBottom: 0
+                anchorOffsetLeft: 0
+                anchorOffsetTop: 0
+                anchorOffsetRight: 420
+                anchorOffsetBottom: 22
+                positionOffset: [0, 0]
+                pivot: [0, 0]
+                anchorPreset: TOP_LEFT
+                usingAnchors: true
+                panel: 0
+                containerBoxIndex: -1
+                scissor: [489, 415.00003, 402, 22]
+                ignoreScissor: true
+                ignoreEvents: true
+              image:
+                patchMarginLeft: 9
+                patchMarginRight: 9
+                patchMarginTop: 0
+                patchMarginBottom: 0
+                textureScaleFactor: 0
+      - type: Entity
+        entity: 1006
+        name: Tip
+        components:
+          transform:
+            position: [108, 147, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [488, 412, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [108, 147, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [488, 412, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          ui:
+            primitiveType: triangles
+            vertexCount: 252
+            aabb:
+              min: [0, 0, 0]
+              max: [305, 19.342957, 0]
+            worldAABB:
+              min: [488, 412, 0]
+              max: [793, 431.34296, 0]
+            texture:
+              textureType: 2D
+              source: id
+              id: fonts/LilitaOne-Regular.ttf|19#31
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: false
+            color: [0.80695224, 0.67244315, 0.49102086, 1]
+            automaticFlipY: true
+            flipY: false
+            pointerMoved: false
+            focused: false
+          uilayout:
+            width: 305
+            height: 19
+            anchorPointLeft: 0.5
+            anchorPointTop: 1
+            anchorPointRight: 0.5
+            anchorPointBottom: 1
+            anchorOffsetLeft: -152
+            anchorOffsetTop: -19
+            anchorOffsetRight: 153
+            anchorOffsetBottom: 0
+            positionOffset: [0, -24]
+            pivot: [0, 0]
+            anchorPreset: CENTER_BOTTOM
+            usingAnchors: true
+            panel: 0
+            containerBoxIndex: -1
+            scissor: [446, 331, 488, 157.99997]
+            ignoreScissor: true
+            ignoreEvents: true
+          text:
+            font: [fonts/LilitaOne-Regular.ttf]
+            text: Frost towers slow down everything they hit
+            fontSize: 19
+            multiline: false
+            maxTextSize: 64
+            fixedWidth: false
+            fixedHeight: false
+            pivotBaseline: false
+            pivotCentered: false
+  - type: Entity
+    entity: 1007
+    name: Screen
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      script:
+        scripts:
+          - type: lua
+            path: scripts/LoadingScreen.lua
+            className: LoadingScreen
+            enabled: true
+            properties:
+              - name: fill
+                displayName: Fill
+                type: EntityReference
+                ptrTypeName: Image
+                value: 1005
+                defaultValue: 0

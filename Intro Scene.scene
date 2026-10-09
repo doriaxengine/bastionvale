@@ -1,0 +1,2773 @@
+id: 325110629
+name: Intro Scene
+scene:
+  backgroundColor: [0.62, 0.76, 0.93, 1]
+  shadowQuality: high
+  meshLodEnabled: false
+  meshLodThreshold: 1
+  depthPrepassEnabled: false
+  lightState: on
+  globalIlluminationIntensity: 0.42
+  globalIlluminationColor: [0.95, 0.97, 1]
+  ambientLight2DIntensity: 1
+  ambientLight2DColor: [1, 1, 1]
+  shadow2DQuality: low
+  ssaoEnabled: false
+  ssaoRadius: 0.5
+  ssaoIntensity: 1
+  ssaoBias: 0.025
+  ssrEnabled: false
+  ssrMaxDistance: 8
+  ssrThickness: 0.5
+  ssrMaxSteps: 48
+  ssrIntensity: 1
+  ssrBlur: 0
+  gravity2D: [0, -9.81]
+  gravity3D: [0, -9.81, 0]
+  fixedResolutionEnabled: false
+  fixedResolutionWidth: 640
+  fixedResolutionHeight: 360
+  fixedResolutionFilter: nearest
+  enableUIEvents: not_set
+sceneType: scene_3d
+mainCamera: 1116
+maxValues:
+  maxSubmeshes: 2
+  maxTilemapTilesRect: 0
+  maxTilemapTiles: 0
+  maxExternalBuffers: 5
+  maxSpriteFrames: 0
+  maxBones: 128
+  maxShapes2D: 0
+  maxShapePoints2D: 0
+  maxShapes3D: 0
+  maxShapeVertices3D: 0
+  maxShapeIndices3D: 0
+shaderKeys:
+  - type: points
+    properties: 5
+  - type: mesh
+    properties: 5338
+  - type: mesh
+    properties: 33558874
+  - type: mesh
+    properties: 33821018
+  - type: mesh
+    properties: 134353114
+  - type: sky
+  - type: depth
+  - type: depth
+    properties: 32
+  - type: depth
+    properties: 64
+  - type: blit
+childScenes:
+  - id: 3078221722
+    startActive: true
+bundles:
+  - bundles/Ballista.bundle
+  - bundles/Cannon.bundle
+  - bundles/FrostTower.bundle
+  - bundles/Keep.bundle
+entities:
+  - type: Entity
+    entity: 1103
+    name: Hover 2
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: true
+        target: 1102
+        ownedTarget: false
+      timedaction:
+        duration: 1.4
+        loop: true
+        pingPong: true
+        function: SINE_IN_OUT
+      positionaction:
+        endPosition: [-4, 10.3, 26]
+        startPosition: [-4, 9.5, 26]
+  - type: Entity
+    entity: 1107
+    name: Hover 3
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: true
+        target: 1104
+        ownedTarget: false
+      timedaction:
+        duration: 1.4
+        loop: true
+        pingPong: true
+        function: SINE_IN_OUT
+      positionaction:
+        endPosition: [4, 10.8, 26]
+        startPosition: [4, 10, 26]
+  - type: Entity
+    entity: 1109
+    name: Orbit 2
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1108
+        ownedTarget: false
+      timedaction:
+        duration: 80
+        loop: true
+        pingPong: false
+        function: LINEAR
+      rotationaction:
+        endRotation: [1, 0, 0, 0]
+        startRotation: [1, 0, 0, 0]
+        shortestPath: false
+        spin: true
+        axis: [0, 1, 0]
+        angle: 360
+  - type: Entity
+    entity: 1101
+    name: Hover
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: true
+        target: 1100
+        ownedTarget: false
+      timedaction:
+        duration: 1.4
+        loop: true
+        pingPong: true
+        function: SINE_IN_OUT
+      positionaction:
+        endPosition: [0, 9.8, 22]
+        startPosition: [0, 9, 22]
+  - type: Entity
+    entity: 1003
+    name: Fog
+    components:
+      fog:
+        type: linear
+        color: [0.477, 0.6209, 0.8689]
+        density: 0.01
+        linearStart: 90
+        linearEnd: 260
+  - type: Entity
+    entity: 1002
+    name: Sky
+    components:
+      sky:
+        useDefaultTexture: false
+        texture:
+          textureType: CUBE
+          cubeMode: single
+          source: path
+          path: sky/skybox-day.png
+          minFilter: linear
+          magFilter: linear
+          wrapU: repeat
+          wrapV: repeat
+          releaseDataAfterLoad: true
+        color: [1, 1, 1, 1]
+        rotation: 0
+        visible: true
+  - type: Entity
+    entity: 1099
+    name: Orbit
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1098
+        ownedTarget: false
+      timedaction:
+        duration: 50
+        loop: true
+        pingPong: false
+        function: LINEAR
+      rotationaction:
+        endRotation: [1, 0, 0, 0]
+        startRotation: [1, 0, 0, 0]
+        shortestPath: false
+        spin: true
+        axis: [0, 1, 0]
+        angle: 360
+  - type: Entity
+    entity: 1001
+    name: Sun
+    components:
+      transform:
+        position: [0, 10, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 10, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 10, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 10, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, -10], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      light:
+        type: directional
+        direction: [-0.42, -0.78, -0.46]
+        worldDirection: [-0.42, -0.78, -0.46]
+        color: [1, 1, 1]
+        range: 100
+        intensity: 4.2
+        innerConeCos: 0.76604444
+        outerConeCos: 0.64278764
+        spotMask: ~
+        shadows: true
+        automaticShadowCamera: true
+        shadowBias: 0.002
+        mapResolution: 2048
+        shadowCameraNearFar: [0.3, 100]
+        numShadowCascades: 3
+  - type: Entity
+    entity: 1004
+    name: Terrain
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      mesh:
+        submeshes:
+          - material:
+              baseColorFactor: [1, 1, 1, 1]
+              metallicFactor: 0
+              roughnessFactor: 1
+              alphaCutoff: 0.5
+              foliageTransmission: 0
+              alphaMode: AUTO
+              emissiveFactor: [0, 0, 0]
+              baseColorTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_color.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              metallicRoughnessTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              occlusionTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              normalTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_normal.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              baseColorTexCoord: 0
+              metallicRoughnessTexCoord: 0
+              occlusionTexCoord: 0
+              emissiveTexCoord: 0
+              normalTexCoord: 0
+              name: ""
+            textureRect: [0, 0, 1, 1]
+            primitiveType: triangles
+            vertexCount: 6144
+            faceCulling: true
+            textureShadow: false
+            overrideFields: 3714
+            hasTexCoord1: false
+            hasTexCoord2: false
+            hasNormalMap: true
+            hasTangent: false
+            hasVertexColor3: false
+            hasVertexColor4: false
+            hasTextureRect: false
+            hasSkinning: false
+            hasMorphTarget: false
+            hasMorphNormal: false
+            hasMorphTangent: false
+          - material:
+              baseColorFactor: [1, 1, 1, 1]
+              metallicFactor: 0
+              roughnessFactor: 1
+              alphaCutoff: 0.5
+              foliageTransmission: 0
+              alphaMode: AUTO
+              emissiveFactor: [0, 0, 0]
+              baseColorTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_color.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              metallicRoughnessTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              occlusionTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              normalTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_normal.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              baseColorTexCoord: 0
+              metallicRoughnessTexCoord: 0
+              occlusionTexCoord: 0
+              emissiveTexCoord: 0
+              normalTexCoord: 0
+              name: ""
+            textureRect: [0, 0, 1, 1]
+            primitiveType: triangles
+            vertexCount: 1536
+            faceCulling: true
+            textureShadow: false
+            hasTexCoord1: false
+            hasTexCoord2: false
+            hasNormalMap: true
+            hasTangent: false
+            hasVertexColor3: false
+            hasVertexColor4: false
+            hasTextureRect: false
+            hasSkinning: false
+            hasMorphTarget: false
+            hasMorphNormal: false
+            hasMorphTangent: false
+        normAdjustJoint: 1
+        normAdjustWeight: 1
+        aabb:
+          min: [-65, 0, -65]
+          max: [65, 16, 65]
+        verticesAABB:
+          min: [0, 0, 0]
+          max: [0, 0, 0]
+        worldAABB:
+          min: [-65, 0, -65]
+          max: [65, 16, 65]
+        receiveLights: true
+        receiveIBL: false
+        castShadows: true
+        receiveShadows: true
+        lodEnabled: true
+        lodBias: 1
+        renderInReflectionProbes: true
+        shadowsBillboard: true
+        transparent: false
+        cullingMode: back
+        windingOrder: ccw
+      terrain:
+        heightMap:
+          textureType: 2D
+          source: path
+          path: terrain_maps/green_vale_height.png
+          minFilter: linear
+          magFilter: linear
+          wrapU: clamp_to_edge
+          wrapV: clamp_to_edge
+          releaseDataAfterLoad: false
+        blendMaps:
+          - textureType: 2D
+            source: path
+            path: terrain_maps/green_vale_blend0.png
+            minFilter: linear
+            magFilter: linear
+            wrapU: clamp_to_edge
+            wrapV: clamp_to_edge
+            releaseDataAfterLoad: true
+        surfaceLayers:
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1, 1, 1, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [1, 1]
+            uvOffset: [0, 0]
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1, 1, 1, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [0.55, 0.55]
+            uvOffset: [0, 0]
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1, 1, 1, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [1.2, 1.2]
+            uvOffset: [0, 0]
+        autoSetRanges: true
+        offset: [0, 0]
+        terrainSize: 130
+        maxHeight: 16
+        resolution: 32
+        textureBaseTiles: 42
+        textureDetailTiles: 42
+        rootGridSize: 2
+        levels: 6
+        ranges:
+          - 4.0625
+          - 8.125
+          - 16.25
+          - 32.5
+          - 65
+          - 4000
+  - type: Entity
+    entity: 1005
+    name: Keep
+    components:
+      transform:
+        position: [54, 0, 6]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [54, 0, 6]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+        normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      bundle:
+        name: Keep
+        path: bundles/Keep.bundle
+  - type: Entity
+    entity: 1026
+    name: Ballista
+    components:
+      transform:
+        position: [38, 3, 8]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [38, 3, 8]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 3, 8, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 3, 8, 1]]
+        normalMatrix: [[1, 0, 0, -38], [0, 1, 0, -3], [0, 0, 1, -8], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      bundle:
+        name: Ballista
+        path: bundles/Ballista.bundle
+  - type: Entity
+    entity: 1044
+    name: Cannon
+    components:
+      transform:
+        position: [38, 3, -22]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [38, 3, -22]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 3, -22, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 3, -22, 1]]
+        normalMatrix: [[1, 0, 0, -38], [0, 1, 0, -3], [0, -0, 1, 22], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      bundle:
+        name: Cannon
+        path: bundles/Cannon.bundle
+  - type: Entity
+    entity: 1061
+    name: FrostTower
+    components:
+      transform:
+        position: [18, 3, 13]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [18, 3, 13]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [18, 3, 13, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [18, 3, 13, 1]]
+        normalMatrix: [[1, 0, 0, -18], [0, 1, 0, -3], [0, 0, 1, -13], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      bundle:
+        name: FrostTower
+        path: bundles/FrostTower.bundle
+  - type: Entity
+    entity: 1085
+    name: Trees
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1097
+        name: detail-tree-large 5
+        components:
+          transform:
+            position: [-2, 2.85, 34]
+            rotation: [-0.25881904, -0, 0.9659258, -0]
+            scale: [5.5, 5.5, 5.5]
+            worldPosition: [-2, 2.85, 34]
+            worldRotation: [-0.25881904, -0, 0.9659258, 0]
+            worldScale: [5.5, 5.5, 5.5]
+            localMatrix: [[-4.7631392, 0, 2.75, 0], [0, 5.5, 0, 0], [-2.75, 0, -4.7631392, 0], [-2, 2.85, 34, 1]]
+            modelMatrix: [[-4.7631392, 0, 2.75, 0], [0, 5.5, 0, 0], [-2.75, 0, -4.7631392, 0], [-2, 2.85, 34, 1]]
+            normalMatrix: [[-0.15745917, 0, 0.09090911, -3.405828], [0, 0.18181819, 0, -0.5181818], [-0.09090911, 0, -0.15745917, 5.1717935], [0, -0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            verticesAABB:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            worldAABB:
+              min: [-3.878285, 2.85, 32.121716]
+              max: [-0.12171519, 7.0299997, 35.878284]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree-large.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1096
+        name: detail-tree 4
+        components:
+          transform:
+            position: [4, 2.85, 30]
+            rotation: [0.5, 0, 0.8660254, 0]
+            scale: [5, 5, 5]
+            worldPosition: [4, 2.85, 30]
+            worldRotation: [0.5, 0, 0.8660254, 0]
+            worldScale: [5, 5, 5]
+            localMatrix: [[-2.5, 0, -4.330127, 0], [0, 5, 0, 0], [4.330127, 0, -2.5, 0], [4, 2.85, 30, 1]]
+            modelMatrix: [[-2.5, 0, -4.330127, 0], [0, 5, 0, 0], [4.330127, 0, -2.5, 0], [4, 2.85, 30, 1]]
+            normalMatrix: [[-0.1, 0, -0.17320509, 5.596153], [0, 0.19999999, 0, -0.57], [0.17320509, 0, -0.1, 2.3071797], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            verticesAABB:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            worldAABB:
+              min: [2.8047278, 2.85, 28.804728]
+              max: [5.1952724, 5.51, 31.195272]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1095
+        name: detail-crystal
+        components:
+          transform:
+            position: [12, 2.85, 4]
+            rotation: [0.9238795, 0, 0.38268343, 0]
+            scale: [3.5, 3.5, 3.5]
+            worldPosition: [12, 2.85, 4]
+            worldRotation: [0.9238795, 0, 0.38268343, 0]
+            worldScale: [3.5, 3.5, 3.5]
+            localMatrix: [[2.474874, 0, -2.4748738, 0], [0, 3.5, 0, 0], [2.4748738, 0, 2.474874, 0], [12, 2.85, 4, 1]]
+            modelMatrix: [[2.474874, 0, -2.4748738, 0], [0, 3.5, 0, 0], [2.4748738, 0, 2.474874, 0], [12, 2.85, 4, 1]]
+            normalMatrix: [[0.2020305, 0, -0.20203048, -1.616244], [0, 0.2857143, 0, -0.8142857], [0.20203048, 0, 0.2020305, -3.2324877], [0, 0, 0, 0.99999994]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-crystal.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 204
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.12559009, 8.0148267e-32, -0.14501894]
+              max: [0.12559009, 0.42499998, 0.14501894]
+            verticesAABB:
+              min: [-0.12559009, 8.0148267e-32, -0.14501894]
+              max: [0.12559009, 0.42499998, 0.14501894]
+            worldAABB:
+              min: [11.3302765, 2.85, 3.3302767]
+              max: [12.6697235, 4.3374996, 4.669723]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-crystal.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1094
+        name: detail-rocks
+        components:
+          transform:
+            position: [28, 2.85, -16]
+            rotation: [0.70710677, 0, 0.70710677, 0]
+            scale: [4, 4, 4]
+            worldPosition: [28, 2.85, -16]
+            worldRotation: [0.70710677, 0, 0.70710677, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[2.3841858e-07, 0, -3.9999998, 0], [0, 4, 0, 0], [3.9999998, 0, 2.3841858e-07, 0], [28, 2.85, -16, 1]]
+            modelMatrix: [[2.3841858e-07, 0, -3.9999998, 0], [0, 4, 0, 0], [3.9999998, 0, 2.3841858e-07, 0], [28, 2.85, -16, 1]]
+            normalMatrix: [[1.4901163e-08, 0, -0.25, -4.0000005], [0, 0.25, 0, -0.7124999], [0.25, 0, 1.4901163e-08, -7], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-rocks.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 552
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.29565424, -4.0607517e-16, -0.32069832]
+              max: [0.30188286, 0.18445, 0.28477228]
+            verticesAABB:
+              min: [-0.29565424, -4.0607517e-16, -0.32069832]
+              max: [0.30188286, 0.18445, 0.28477228]
+            worldAABB:
+              min: [26.717207, 2.85, -17.207531]
+              max: [29.13909, 3.5878, -14.817383]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-rocks.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1093
+        name: detail-tree-large 4
+        components:
+          transform:
+            position: [52, 2.85, -16]
+            rotation: [-0.64278764, -0, 0.76604444, -0]
+            scale: [6, 6, 6]
+            worldPosition: [52, 2.85, -16]
+            worldRotation: [-0.64278764, -0, 0.76604444, 0]
+            worldScale: [6, 6, 6]
+            localMatrix: [[-1.0418887, 0, 5.908847, 0], [0, 6, 0, 0], [-5.908847, 0, -1.0418887, 0], [52, 2.85, -16, 1]]
+            modelMatrix: [[-1.0418887, 0, 5.908847, 0], [0, 6, 0, 0], [-5.908847, 0, -1.0418887, 0], [52, 2.85, -16, 1]]
+            normalMatrix: [[-0.02894135, 0, 0.1641346, 4.131104], [0, 0.16666667, 0, -0.475], [-0.1641346, 0, -0.02894135, 8.071938], [0, -0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            verticesAABB:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            worldAABB:
+              min: [50.262318, 2.85, -17.737684]
+              max: [53.737682, 7.41, -14.262316]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree-large.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1092
+        name: detail-tree 3
+        components:
+          transform:
+            position: [47, 2.85, -18]
+            rotation: [0.9961947, 0, 0.087155744, 0]
+            scale: [5, 5, 5]
+            worldPosition: [47, 2.85, -18]
+            worldRotation: [0.9961947, 0, 0.087155744, 0]
+            worldScale: [5, 5, 5]
+            localMatrix: [[4.924039, 0, -0.8682409, 0], [0, 5, 0, 0], [0.8682409, 0, 4.924039, 0], [47, 2.85, -18, 1]]
+            modelMatrix: [[4.924039, 0, -0.8682409, 0], [0, 5, 0, 0], [0.8682409, 0, 4.924039, 0], [47, 2.85, -18, 1]]
+            normalMatrix: [[0.19696155, 0, -0.034729637, -9.882327], [0, 0.2, 0, -0.57000005], [0.034729637, 0, 0.19696155, 1.913015], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            verticesAABB:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            worldAABB:
+              min: [45.98635, 2.85, -19.013649]
+              max: [48.01365, 5.51, -16.986351]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1091
+        name: detail-tree-large 3
+        components:
+          transform:
+            position: [14, 2.85, 22]
+            rotation: [-0.8660254, -0, 0.5, -0]
+            scale: [5, 5, 5]
+            worldPosition: [14, 2.85, 22]
+            worldRotation: [-0.8660254, -0, 0.5, 0]
+            worldScale: [5, 5, 5]
+            localMatrix: [[2.5, 0, 4.330127, 0], [0, 5, 0, 0], [-4.330127, 0, 2.5, 0], [14, 2.85, 22, 1]]
+            modelMatrix: [[2.5, 0, 4.330127, 0], [0, 5, 0, 0], [-4.330127, 0, 2.5, 0], [14, 2.85, 22, 1]]
+            normalMatrix: [[0.1, 0, 0.17320509, -5.210512], [0, 0.19999999, 0, -0.57], [-0.17320509, 0, 0.1, 0.2248711], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            verticesAABB:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            worldAABB:
+              min: [12.292468, 2.85, 20.292469]
+              max: [15.707532, 6.6499996, 23.707531]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree-large.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1090
+        name: detail-rocks-large
+        components:
+          transform:
+            position: [20, 2.85, 28]
+            rotation: [0.9659258, 0, 0.25881904, 0]
+            scale: [4.5, 4.5, 4.5]
+            worldPosition: [20, 2.85, 28]
+            worldRotation: [0.9659258, 0, 0.25881904, 0]
+            worldScale: [4.5, 4.5, 4.5]
+            localMatrix: [[3.8971143, 0, -2.25, 0], [0, 4.5, 0, 0], [2.25, 0, 3.8971143, 0], [20, 2.85, 28, 1]]
+            modelMatrix: [[3.8971143, 0, -2.25, 0], [0, 4.5, 0, 0], [2.25, 0, 3.8971143, 0], [20, 2.85, 28, 1]]
+            normalMatrix: [[0.19245009, 0, -0.11111111, -0.7378906], [0, 0.22222222, 0, -0.6333333], [0.11111111, 0, 0.19245009, -7.6108246], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-rocks-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 696
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.43387473, -4.5119463e-17, -0.41781396]
+              max: [0.45830482, 0.4145461, 0.44152346]
+            verticesAABB:
+              min: [-0.43387473, -4.5119463e-17, -0.41781396]
+              max: [0.45830482, 0.4145461, 0.44152346]
+            worldAABB:
+              min: [17.369059, 2.85, 25.340546]
+              max: [22.779493, 4.7154574, 30.696886]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-rocks-large.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1089
+        name: detail-tree 2
+        components:
+          transform:
+            position: [24, 2.85, 34]
+            rotation: [-0.17364818, -0, 0.9848077, -0]
+            scale: [5, 5, 5]
+            worldPosition: [24, 2.85, 34]
+            worldRotation: [-0.17364818, -0, 0.9848077, 0]
+            worldScale: [5, 5, 5]
+            localMatrix: [[-4.6984625, 0, 1.7101007, 0], [0, 5, 0, 0], [-1.7101007, 0, -4.6984625, 0], [24, 2.85, 34, 1]]
+            modelMatrix: [[-4.6984625, 0, 1.7101007, 0], [0, 5, 0, 0], [-1.7101007, 0, -4.6984625, 0], [24, 2.85, 34, 1]]
+            normalMatrix: [[-0.18793854, 0, 0.068404034, 2.1847875], [0, 0.19999999, 0, -0.56999993], [-0.068404034, 0, -0.18793854, 8.031607], [0, -0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            verticesAABB:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            worldAABB:
+              min: [22.878502, 2.85, 32.8785]
+              max: [25.121498, 5.51, 35.1215]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1088
+        name: detail-tree-large 2
+        components:
+          transform:
+            position: [46, 2.85, 26]
+            rotation: [0.34202015, 0, 0.9396926, 0]
+            scale: [6, 6, 6]
+            worldPosition: [46, 2.85, 26]
+            worldRotation: [0.34202015, 0, 0.9396926, 0]
+            worldScale: [6, 6, 6]
+            localMatrix: [[-4.5962663, 0, -3.8567257, 0], [0, 6, 0, 0], [3.8567257, 0, -4.5962663, 0], [46, 2.85, 26, 1]]
+            modelMatrix: [[-4.5962663, 0, -3.8567257, 0], [0, 6, 0, 0], [3.8567257, 0, -4.5962663, 0], [46, 2.85, 26, 1]]
+            normalMatrix: [[-0.12767409, 0, -0.10713128, 8.6584215], [0, 0.16666667, 0, -0.475], [0.10713128, 0, -0.12767409, -1.6085128], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            verticesAABB:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            worldAABB:
+              min: [43.886753, 2.85, 23.886753]
+              max: [48.113247, 7.41, 28.113247]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree-large.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1087
+        name: detail-tree
+        components:
+          transform:
+            position: [34, 2.85, 33]
+            rotation: [0.76604444, 0, 0.64278764, 0]
+            scale: [4.5, 4.5, 4.5]
+            worldPosition: [34, 2.85, 33]
+            worldRotation: [0.76604444, 0, 0.64278764, 0]
+            worldScale: [4.5, 4.5, 4.5]
+            localMatrix: [[0.78141654, 0, -4.431635, 0], [0, 4.5, 0, 0], [4.431635, 0, 0.78141654, 0], [34, 2.85, 33, 1]]
+            modelMatrix: [[0.78141654, 0, -4.431635, 0], [0, 4.5, 0, 0], [4.431635, 0, 0.78141654, 0], [34, 2.85, 33, 1]]
+            normalMatrix: [[0.03858847, 0, -0.21884616, 5.909916], [0, 0.2222222, 0, -0.6333333], [0.21884616, 0, 0.03858847, -8.714189], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            verticesAABB:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            worldAABB:
+              min: [33.087715, 2.85, 32.087715]
+              max: [34.912285, 5.244, 33.912285]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1086
+        name: detail-tree-large
+        components:
+          transform:
+            position: [30, 2.85, 30]
+            rotation: [0.9848077, 0, 0.17364818, 0]
+            scale: [5.5, 5.5, 5.5]
+            worldPosition: [30, 2.85, 30]
+            worldRotation: [0.9848077, 0, 0.17364818, 0]
+            worldScale: [5.5, 5.5, 5.5]
+            localMatrix: [[5.168309, 0, -1.8811107, 0], [0, 5.5, 0, 0], [1.8811107, 0, 5.168309, 0], [30, 2.85, 30, 1]]
+            modelMatrix: [[5.168309, 0, -1.8811107, 0], [0, 5.5, 0, 0], [1.8811107, 0, 5.168309, 0], [30, 2.85, 30, 1]]
+            normalMatrix: [[0.17085321, 0, -0.06218548, -3.260032], [0, 0.18181819, 0, -0.5181818], [0.06218548, 0, 0.17085321, -6.991161], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/detail-tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            verticesAABB:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            worldAABB:
+              min: [28.237644, 2.85, 28.237644]
+              max: [31.762356, 7.0299997, 31.762356]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/detail-tree-large.glb
+            skeleton: 0
+  - type: Entity
+    entity: 1098
+    name: Raid
+    components:
+      transform:
+        position: [14, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [14, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [14, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [14, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, -14], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1104
+        name: enemy-ufo-b-weapon
+        components:
+          transform:
+            position: [4, 10, 26]
+            rotation: [0.70710677, 0, 0.70710677, 0]
+            scale: [2.8, 2.8, 2.8]
+            worldPosition: [18, 10, 26]
+            worldRotation: [0.70710677, 0, 0.70710677, 0]
+            worldScale: [2.8, 2.8, 2.8]
+            localMatrix: [[1.66893e-07, 0, -2.7999997, 0], [0, 2.8, 0, 0], [2.7999997, 0, 1.66893e-07, 0], [4, 10, 26, 1]]
+            modelMatrix: [[1.66893e-07, 0, -2.7999997, 0], [0, 2.8, 0, 0], [2.7999997, 0, 1.66893e-07, 0], [18, 10, 26, 1]]
+            normalMatrix: [[2.1287377e-08, 0, -0.3571429, 9.285715], [0, 0.35714284, 0, -3.5714283], [0.3571429, 0, 2.1287377e-08, -6.4285727], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes: ~
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [0, 0, 0]
+              max: [0, 0, 0]
+            verticesAABB:
+              min: [0, 0, 0]
+              max: [0, 0, 0]
+            worldAABB:
+              min: [18, 10, 26]
+              max: [18, 10, 26]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/enemy-ufo-b-weapon.glb
+            skeleton: 0
+            meshNodesMapping:
+              - node: 0
+                entity: 1105
+              - node: 1
+                entity: 1106
+        children:
+          - type: Entity
+            entity: 1105
+            name: enemy-ufo-b-weapon
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [18, 10, 26]
+                worldRotation: [0.70710677, 0, 0.70710677, 0]
+                worldScale: [2.8, 2.8, 2.8]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1.66893e-07, 0, -2.7999997, 0], [0, 2.8, 0, 0], [2.7999997, 0, 1.66893e-07, 0], [18, 10, 26, 1]]
+                normalMatrix: [[2.1287377e-08, 0, -0.3571429, 9.285715], [0, 0.35714284, 0, -3.5714283], [0.3571429, 0, 2.1287377e-08, -6.4285727], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/enemy-ufo-b-weapon.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 2268
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.499675, 0, -0.5]
+                  max: [0.499675, 0.60853887, 0.5]
+                verticesAABB:
+                  min: [-0.499675, 0, -0.5]
+                  max: [0.499675, 0.60853887, 0.5]
+                worldAABB:
+                  min: [16.6, 10, 24.60091]
+                  max: [19.4, 11.703909, 27.39909]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+          - type: Entity
+            entity: 1106
+            name: catapult
+            components:
+              transform:
+                position: [0, 0.55054903, 0.02377063]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [18.066557, 11.541537, 26]
+                worldRotation: [0.70710677, 0, 0.70710677, 0]
+                worldScale: [2.8, 2.8, 2.8]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0.55054903, 0.02377063, 1]]
+                modelMatrix: [[1.66893e-07, 0, -2.7999997, 0], [0, 2.8, 0, 0], [2.7999997, 0, 1.66893e-07, 0], [18.066557, 11.541537, 26, 1]]
+                normalMatrix: [[2.1287377e-08, 0, -0.3571429, 9.285715], [0, 0.35714284, 0, -4.1219773], [0.3571429, 0, 2.1287377e-08, -6.452343], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/enemy-ufo-b-weapon.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 696
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.15, -0.075031504, -0.38872948]
+                  max: [0.15, 0.07503151, 0.23872948]
+                verticesAABB:
+                  min: [-0.15, -0.075031504, -0.38872948]
+                  max: [0.15, 0.07503151, 0.23872948]
+                worldAABB:
+                  min: [16.978115, 11.3314495, 25.58]
+                  max: [18.734999, 11.751625, 26.42]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+      - type: Entity
+        entity: 1102
+        name: enemy-ufo-a 2
+        components:
+          transform:
+            position: [-4, 9.5, 26]
+            rotation: [0.70710677, 0, 0.70710677, 0]
+            scale: [2.4, 2.4, 2.4]
+            worldPosition: [10, 9.5, 26]
+            worldRotation: [0.70710677, 0, 0.70710677, 0]
+            worldScale: [2.4, 2.4, 2.4]
+            localMatrix: [[1.4305115e-07, 0, -2.3999999, 0], [0, 2.4, 0, 0], [2.3999999, 0, 1.4305115e-07, 0], [-4, 9.5, 26, 1]]
+            modelMatrix: [[1.4305115e-07, 0, -2.3999999, 0], [0, 2.4, 0, 0], [2.3999999, 0, 1.4305115e-07, 0], [10, 9.5, 26, 1]]
+            normalMatrix: [[2.4835272e-08, 0, -0.4166667, 10.833334], [0, 0.41666666, 0, -3.9583333], [0.4166667, 0, 2.4835272e-08, -4.1666675], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/enemy-ufo-a.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1560
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.67789847, 0.5]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.67789847, 0.5]
+            worldAABB:
+              min: [8.8, 9.5, 24.8]
+              max: [11.2, 11.126956, 27.2]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/enemy-ufo-a.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1100
+        name: enemy-ufo-a
+        components:
+          transform:
+            position: [0, 9, 22]
+            rotation: [0.70710677, 0, 0.70710677, 0]
+            scale: [2.4, 2.4, 2.4]
+            worldPosition: [14, 9, 22]
+            worldRotation: [0.70710677, 0, 0.70710677, 0]
+            worldScale: [2.4, 2.4, 2.4]
+            localMatrix: [[1.4305115e-07, 0, -2.3999999, 0], [0, 2.4, 0, 0], [2.3999999, 0, 1.4305115e-07, 0], [0, 9, 22, 1]]
+            modelMatrix: [[1.4305115e-07, 0, -2.3999999, 0], [0, 2.4, 0, 0], [2.3999999, 0, 1.4305115e-07, 0], [14, 9, 22, 1]]
+            normalMatrix: [[2.4835272e-08, 0, -0.4166667, 9.166667], [0, 0.41666666, 0, -3.7499998], [0.4166667, 0, 2.4835272e-08, -5.8333344], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/enemy-ufo-a.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1560
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.67789847, 0.5]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.67789847, 0.5]
+            worldAABB:
+              min: [12.8, 9, 20.8]
+              max: [15.2, 10.626956, 23.2]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/enemy-ufo-a.glb
+            skeleton: 0
+  - type: Entity
+    entity: 1108
+    name: Mothership
+    components:
+      transform:
+        position: [20, 0, -4]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [20, 0, -4]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [20, 0, -4, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [20, 0, -4, 1]]
+        normalMatrix: [[1, 0, 0, -20], [0, 1, 0, 0], [0, -0, 1, 4], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1110
+        name: enemy-ufo-d-weapon
+        components:
+          transform:
+            position: [0, 24, 34]
+            rotation: [0.70710677, 0, 0.70710677, 0]
+            scale: [4.8, 4.8, 4.8]
+            worldPosition: [20, 24, 30]
+            worldRotation: [0.70710677, 0, 0.70710677, 0]
+            worldScale: [4.8, 4.8, 4.8]
+            localMatrix: [[2.861023e-07, 0, -4.7999997, 0], [0, 4.8, 0, 0], [4.7999997, 0, 2.861023e-07, 0], [0, 24, 34, 1]]
+            modelMatrix: [[2.861023e-07, 0, -4.7999997, 0], [0, 4.8, 0, 0], [4.7999997, 0, 2.861023e-07, 0], [20, 24, 30, 1]]
+            normalMatrix: [[1.2417636e-08, 0, -0.20833334, 6.25], [0, 0.20833333, 0, -5], [0.20833334, 0, 1.2417636e-08, -4.1666675], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes: ~
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [0, 0, 0]
+              max: [0, 0, 0]
+            verticesAABB:
+              min: [0, 0, 0]
+              max: [0, 0, 0]
+            worldAABB:
+              min: [20, 24, 30]
+              max: [20, 24, 30]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/enemy-ufo-d-weapon.glb
+            skeleton: 0
+            meshNodesMapping:
+              - node: 0
+                entity: 1111
+              - node: 1
+                entity: 1112
+        children:
+          - type: Entity
+            entity: 1111
+            name: enemy-ufo-d-weapon
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [20, 24, 30]
+                worldRotation: [0.70710677, 0, 0.70710677, 0]
+                worldScale: [4.8, 4.8, 4.8]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[2.861023e-07, 0, -4.7999997, 0], [0, 4.8, 0, 0], [4.7999997, 0, 2.861023e-07, 0], [20, 24, 30, 1]]
+                normalMatrix: [[1.2417636e-08, 0, -0.20833334, 6.25], [0, 0.20833333, 0, -5], [0.20833334, 0, 1.2417636e-08, -4.1666675], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/enemy-ufo-d-weapon.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 2316
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.4746912, 0, -0.47499996]
+                  max: [0.4746912, 0.5923333, 0.47499996]
+                verticesAABB:
+                  min: [-0.4746912, 0, -0.47499996]
+                  max: [0.4746912, 0.5923333, 0.47499996]
+                worldAABB:
+                  min: [17.72, 24, 27.721481]
+                  max: [22.28, 26.8432, 32.27852]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+          - type: Entity
+            entity: 1112
+            name: arrow
+            components:
+              transform:
+                position: [0, 0.57, -0.0084]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [19.95968, 26.736, 30]
+                worldRotation: [0.70710677, 0, 0.70710677, 0]
+                worldScale: [4.8, 4.8, 4.8]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0.57, -0.0084, 1]]
+                modelMatrix: [[2.861023e-07, 0, -4.7999997, 0], [0, 4.8, 0, 0], [4.7999997, 0, 2.861023e-07, 0], [19.95968, 26.736, 30, 1]]
+                normalMatrix: [[1.2417636e-08, 0, -0.20833334, 6.25], [0, 0.20833333, 0, -5.57], [0.20833334, 0, 1.2417636e-08, -4.1582675], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/enemy-ufo-d-weapon.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 672
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.2484959, -0.067499995, -0.21660018]
+                  max: [0.2484959, 0.0675, 0.3665998]
+                verticesAABB:
+                  min: [-0.2484959, -0.067499995, -0.21660018]
+                  max: [0.2484959, 0.0675, 0.3665998]
+                worldAABB:
+                  min: [18.92, 26.412, 28.80722]
+                  max: [21.71936, 27.06, 31.19278]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+  - type: Entity
+    entity: 1113
+    name: Hover 4
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: true
+        target: 1110
+        ownedTarget: false
+      timedaction:
+        duration: 1.4
+        loop: true
+        pingPong: true
+        function: SINE_IN_OUT
+      positionaction:
+        endPosition: [0, 24.8, 34]
+        startPosition: [0, 24, 34]
+  - type: Entity
+    entity: 1114
+    name: Camera Rig
+    components:
+      transform:
+        position: [30, 3, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [30, 3, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [30, 3, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [30, 3, 0, 1]]
+        normalMatrix: [[1, 0, 0, -30], [0, 1, 0, -3], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1116
+        name: Camera
+        components:
+          transform:
+            position: [-30, 26, 40]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 29, 40]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-30, 26, 40, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 29, 40, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, -29], [0, 0, 1, -40], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          camera:
+            type: camera_perspective
+            target: [14, 4, 2]
+            up: [0, 1, 0]
+            leftClip: 0
+            rightClip: 10
+            bottomClip: 0
+            topClip: 10
+            yfov: 0.75
+            aspect: 1.6811594
+            nearClip: 0.2
+            farClip: 500
+            renderToTexture: false
+            transparentSort: true
+            depthTest: true
+            useTarget: true
+            autoResize: true
+            framebufferWidth: 512
+            framebufferHeight: 512
+            framebufferFilter: linear
+  - type: Entity
+    entity: 1115
+    name: Sway
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1114
+        ownedTarget: false
+      timedaction:
+        duration: 16
+        loop: true
+        pingPong: true
+        function: SINE_IN_OUT
+      rotationaction:
+        endRotation: [0.9961947, 0, 0.087155744, 0]
+        startRotation: [0.9961947, 0, -0.087155744, 0]
+        shortestPath: false
+        spin: false
+        axis: [0, 1, 0]
+        angle: 360
+  - type: Entity
+    entity: 1175
+    name: Ground
+    components:
+      transform:
+        position: [0, 1.6, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [5, 1, 5]
+        worldPosition: [0, 1.6, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [5, 1, 5]
+        localMatrix: [[5, 0, 0, 0], [0, 1, 0, 0], [0, 0, 5, 0], [0, 1.6, 0, 1]]
+        modelMatrix: [[5, 0, 0, 0], [0, 1, 0, 0], [0, 0, 5, 0], [0, 1.6, 0, 1]]
+        normalMatrix: [[0.19999999, 0, 0, 0], [0, 1, 0, -1.5999999], [0, 0, 0.19999999, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      mesh:
+        buffer:
+          type: vertex_buffer
+          usage: immutable
+          stride: 48
+          size: 192
+          count: 4
+          renderAttributes: true
+          instanceBuffer: false
+          attributes:
+            - type: position
+              dataType: float
+              bufferName: ""
+              elements: 3
+              offset: 0
+              count: 4
+              normalized: true
+              perInstance: false
+            - type: texcoord1
+              dataType: float
+              bufferName: ""
+              elements: 2
+              offset: 12
+              count: 4
+              normalized: true
+              perInstance: false
+            - type: normal
+              dataType: float
+              bufferName: ""
+              elements: 3
+              offset: 20
+              count: 4
+              normalized: true
+              perInstance: false
+            - type: color
+              dataType: float
+              bufferName: ""
+              elements: 4
+              offset: 32
+              count: 4
+              normalized: true
+              perInstance: false
+          data: AABIwgAAAAAAAEjCAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AABIwgAAAAAAAEhCAAAAAAAAyEIAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AABIQgAAAAAAAEhCAADIQgAAyEIAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AABIQgAAAAAAAEjCAADIQgAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/
+          vertexSize: 48
+        indices:
+          type: index_buffer
+          usage: immutable
+          stride: 2
+          size: 12
+          count: 6
+          renderAttributes: true
+          instanceBuffer: false
+          attributes:
+            - type: index
+              dataType: unsigned_short
+              bufferName: ""
+              elements: 1
+              offset: 0
+              count: 6
+              normalized: true
+              perInstance: false
+          data: AAABAAIAAAACAAMA
+        eBuffers: ~
+        submeshes:
+          - material:
+              baseColorFactor: [1, 1, 1, 1]
+              metallicFactor: 0
+              roughnessFactor: 1
+              alphaCutoff: 0.5
+              foliageTransmission: 0
+              alphaMode: AUTO
+              emissiveFactor: [0, 0, 0]
+              baseColorTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_color.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              metallicRoughnessTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              normalTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_normal.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              baseColorTexCoord: 0
+              metallicRoughnessTexCoord: 0
+              occlusionTexCoord: 0
+              emissiveTexCoord: 0
+              normalTexCoord: 0
+              name: ""
+            textureRect: [0, 0, 1, 1]
+            primitiveType: triangles
+            vertexCount: 6
+            faceCulling: true
+            textureShadow: false
+            overrideFields: 2690
+            hasTexCoord1: true
+            hasTexCoord2: false
+            hasNormalMap: true
+            hasTangent: false
+            hasVertexColor3: false
+            hasVertexColor4: true
+            hasTextureRect: false
+            hasSkinning: false
+            hasMorphTarget: false
+            hasMorphNormal: false
+            hasMorphTangent: false
+        bonesMatrix:
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normAdjustJoint: 1
+        normAdjustWeight: 1
+        aabb:
+          min: [-50, 0, -50]
+          max: [50, 0, 50]
+        verticesAABB:
+          min: [-50, 0, -50]
+          max: [50, 0, 50]
+        worldAABB:
+          min: [-250, 1.6, -250]
+          max: [250, 1.6, 250]
+        receiveLights: true
+        receiveIBL: false
+        castShadows: false
+        receiveShadows: true
+        lodEnabled: true
+        lodBias: 1
+        renderInReflectionProbes: true
+        shadowsBillboard: true
+        transparent: false
+        cullingMode: back
+        windingOrder: ccw

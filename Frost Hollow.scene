@@ -1,0 +1,3489 @@
+id: 1592642003
+name: Frost Hollow
+scene:
+  backgroundColor: [0.86, 0.88, 0.94, 1]
+  shadowQuality: high
+  meshLodEnabled: false
+  meshLodThreshold: 1
+  depthPrepassEnabled: false
+  lightState: on
+  globalIlluminationIntensity: 0.55
+  globalIlluminationColor: [0.78, 0.86, 1]
+  ambientLight2DIntensity: 1
+  ambientLight2DColor: [1, 1, 1]
+  shadow2DQuality: low
+  ssaoEnabled: false
+  ssaoRadius: 0.5
+  ssaoIntensity: 1
+  ssaoBias: 0.025
+  ssrEnabled: false
+  ssrMaxDistance: 8
+  ssrThickness: 0.5
+  ssrMaxSteps: 48
+  ssrIntensity: 1
+  ssrBlur: 0
+  gravity2D: [0, -9.81]
+  gravity3D: [0, -9.81, 0]
+  fixedResolutionEnabled: false
+  fixedResolutionWidth: 640
+  fixedResolutionHeight: 360
+  fixedResolutionFilter: nearest
+  enableUIEvents: not_set
+sceneType: scene_3d
+mainCamera: 1004
+maxValues:
+  maxSubmeshes: 2
+  maxTilemapTilesRect: 0
+  maxTilemapTiles: 0
+  maxExternalBuffers: 5
+  maxSpriteFrames: 0
+  maxBones: 128
+  maxShapes2D: 0
+  maxShapePoints2D: 0
+  maxShapes3D: 0
+  maxShapeVertices3D: 0
+  maxShapeIndices3D: 0
+shaderKeys:
+  - type: points
+    properties: 5
+  - type: mesh
+    properties: 1025
+  - type: mesh
+    properties: 1242
+  - type: mesh
+    properties: 5121
+  - type: mesh
+    properties: 5338
+  - type: mesh
+    properties: 33554778
+  - type: mesh
+    properties: 33558874
+  - type: mesh
+    properties: 33816922
+  - type: mesh
+    properties: 33821018
+  - type: mesh
+    properties: 134349018
+  - type: mesh
+    properties: 134353114
+  - type: sky
+  - type: depth
+  - type: depth
+    properties: 32
+  - type: depth
+    properties: 64
+  - type: blit
+childScenes:
+  - id: 2350198592
+    startActive: true
+  - id: 4271405438
+    startActive: false
+  - id: 4005636345
+    startActive: false
+  - id: 112997481
+    startActive: false
+bundles:
+  - bundles/BuildPad.bundle
+  - bundles/Keep.bundle
+entities:
+  - type: Entity
+    entity: 1003
+    name: Fog
+    components:
+      fog:
+        type: linear
+        color: [0.6739, 0.7293, 0.8689]
+        density: 0.01
+        linearStart: 100
+        linearEnd: 280
+  - type: Entity
+    entity: 1116
+    name: Emitter
+    components:
+      action:
+        state: Stopped
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1115
+        ownedTarget: false
+      particles:
+        maxParticles: 90
+        emitter: true
+        loop: true
+        localSpace: false
+        rate: 34
+        maxPerUpdate: 64
+        bursts: ~
+        lifeInitializer:
+          minLife: 1.1
+          maxLife: 1.9
+        positionInitializer:
+          shape: Circle
+          minPosition: [0, 0, 0]
+          maxPosition: [0, 0, 0]
+          radius: 3.2
+          innerRadius: 1.8
+          coneAngle: 45
+          coneHeight: 1
+        positionModifier:
+          fromTime: 0
+          toTime: 0
+          fromPosition: [0, 0, 0]
+          toPosition: [0, 0, 0]
+          function: LINEAR
+        velocityInitializer:
+          minVelocity: [-0.4, 4, -0.4]
+          maxVelocity: [0.4, 7.5, 0.4]
+        velocityModifier:
+          fromTime: 0
+          toTime: 0
+          fromVelocity: [0, 0, 0]
+          toVelocity: [0, 0, 0]
+          function: LINEAR
+        accelerationInitializer:
+          minAcceleration: [0, -1.2, 0]
+          maxAcceleration: [0, -0.4, 0]
+        accelerationModifier:
+          fromTime: 0
+          toTime: 0
+          fromAcceleration: [0, 0, 0]
+          toAcceleration: [0, 0, 0]
+          function: LINEAR
+        colorInitializer:
+          minColor: [1, 1, 1]
+          maxColor: [1, 1, 1]
+          useSRGB: true
+        colorModifier:
+          fromTime: 0
+          toTime: 0
+          fromColor: [0, 0, 0]
+          toColor: [0, 0, 0]
+          function: LINEAR
+          useSRGB: true
+        colorGradient:
+          useSRGB: true
+          stops:
+            - time: 0
+              color: [0.55, 0.95, 1]
+            - time: 0.6
+              color: [0.35, 0.55, 1]
+            - time: 1
+              color: [0.2, 0.2, 0.55]
+        alphaInitializer:
+          minAlpha: 1
+          maxAlpha: 1
+        alphaModifier:
+          fromTime: 0.44
+          toTime: 1.9
+          fromAlpha: 1
+          toAlpha: 0
+          function: LINEAR
+        sizeInitializer:
+          minSize: 1.6
+          maxSize: 3
+        sizeModifier:
+          fromTime: 0
+          toTime: 1.9
+          fromSize: 3
+          toSize: 0.75
+          function: QUAD_OUT
+        spriteInitializer:
+          frames: ~
+        spriteModifier:
+          fromTime: 0
+          toTime: 0
+          function: LINEAR
+          frames: ~
+        rotationInitializer:
+          minRotation: [1, 0, 0, 0]
+          maxRotation: [1, 0, 0, 0]
+          shortestPath: false
+        rotationModifier:
+          fromTime: 0
+          toTime: 0
+          fromRotation: [1, 0, 0, 0]
+          toRotation: [1, 0, 0, 0]
+          function: LINEAR
+          shortestPath: false
+        scaleInitializer:
+          minScale: [1, 1, 1]
+          maxScale: [1, 1, 1]
+          linearSort: true
+        scaleModifier:
+          fromTime: 0
+          toTime: 0
+          fromScale: [1, 1, 1]
+          toScale: [1, 1, 1]
+          function: LINEAR
+  - type: Entity
+    entity: 1005
+    name: Level
+    components:
+      script:
+        scripts:
+          - type: lua
+            path: scripts/LevelDirector.lua
+            className: LevelDirector
+            enabled: true
+            properties:
+              - name: levelName
+                displayName: Level Name
+                type: String
+                value: Frost Hollow
+                defaultValue: Green Vale
+              - name: nextLevel
+                displayName: Next Level
+                type: String
+                value: ""
+                defaultValue: ""
+              - name: startGold
+                displayName: Start Gold
+                type: Int
+                value: 240
+                defaultValue: 190
+              - name: lives
+                displayName: Lives
+                type: Int
+                value: 20
+                defaultValue: 20
+              - name: firstWaveDelay
+                displayName: First Wave Delay
+                type: Float
+                value: 20
+                defaultValue: 20
+              - name: waveDelay
+                displayName: Wave Delay
+                type: Float
+                value: 13
+                defaultValue: 12
+              - name: road
+                displayName: Road
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1010
+                defaultValue: 0
+  - type: Entity
+    entity: 1111
+    name: Wave Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/wave.ogg
+        enableClocked: false
+        volume: 0.6
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1100
+    name: Build Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/build.ogg
+        enableClocked: false
+        volume: 0.6
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1102
+    name: Denied Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/denied.ogg
+        enableClocked: false
+        volume: 0.5
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1103
+    name: Explosion Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/enemy_die.ogg
+        enableClocked: false
+        volume: 0.45
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1104
+    name: Leak Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/leak.ogg
+        enableClocked: false
+        volume: 0.7
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1105
+    name: Select Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/select.ogg
+        enableClocked: false
+        volume: 0.35
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1106
+    name: Sell Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/sell.ogg
+        enableClocked: false
+        volume: 0.5
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1110
+    name: Upgrade Sound
+    components:
+      sound:
+        state: stopped
+        filename: audio/upgrade.ogg
+        enableClocked: false
+        volume: 0.6
+        speed: 1
+        pan: 0
+        looping: false
+        loopingPoint: 0
+        protectVoice: false
+        inaudibleBehaviorMustTick: false
+        inaudibleBehaviorKill: false
+        minDistance: 1
+        maxDistance: 1000
+        attenuationModel: no_attenuation
+        attenuationRolloffFactor: 1
+        dopplerFactor: 1
+  - type: Entity
+    entity: 1001
+    name: Sky
+    components:
+      sky:
+        useDefaultTexture: false
+        texture:
+          textureType: CUBE
+          cubeMode: single
+          source: path
+          path: sky/skybox-morning.png
+          minFilter: linear
+          magFilter: linear
+          wrapU: clamp_to_edge
+          wrapV: clamp_to_edge
+          releaseDataAfterLoad: false
+        color: [1, 1, 1, 1]
+        rotation: 0
+        visible: true
+  - type: Entity
+    entity: 1002
+    name: Sun
+    components:
+      transform:
+        position: [0, 60, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 60, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 60, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 60, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, -60], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      light:
+        type: directional
+        direction: [-0.34, -0.72, -0.6]
+        worldDirection: [-0.34, -0.72, -0.6]
+        color: [1, 0.95, 0.88]
+        range: 400
+        intensity: 4.4
+        innerConeCos: 0.766044
+        outerConeCos: 0.642788
+        spotMask: ~
+        shadows: true
+        automaticShadowCamera: true
+        shadowBias: 0.0026
+        mapResolution: 2048
+        shadowCameraNearFar: [0.5, 400]
+        numShadowCascades: 4
+  - type: Entity
+    entity: 1004
+    name: Camera
+    components:
+      transform:
+        position: [0, 40, 40]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 40, 40]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 40, 40, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 40, 40, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, -40], [0, 0, 1, -40], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      camera:
+        type: camera_perspective
+        target: [0, 3, 0]
+        up: [0, 1, 0]
+        leftClip: 0
+        rightClip: 10
+        bottomClip: 0
+        topClip: 10
+        yfov: 0.78
+        aspect: 1.777778
+        nearClip: 1
+        farClip: 500
+        renderToTexture: false
+        transparentSort: true
+        depthTest: true
+        useTarget: true
+        autoResize: true
+        framebufferWidth: 512
+        framebufferHeight: 512
+        framebufferFilter: linear
+      script:
+        scripts:
+          - type: lua
+            path: scripts/CameraRig.lua
+            className: CameraRig
+            enabled: true
+            properties:
+              - name: focus
+                displayName: Focus
+                type: Vector3
+                value: [8, 3, -2]
+                defaultValue: [8, 3, -2]
+              - name: distance
+                displayName: Distance
+                type: Float
+                value: 78
+                defaultValue: 90
+              - name: minDistance
+                displayName: Min Distance
+                type: Float
+                value: 35
+                defaultValue: 35
+              - name: maxDistance
+                displayName: Max Distance
+                type: Float
+                value: 92
+                defaultValue: 110
+              - name: pitch
+                displayName: Pitch
+                type: Float
+                value: 56
+                defaultValue: 56
+              - name: yaw
+                displayName: Yaw
+                type: Float
+                value: 180
+                defaultValue: 180
+              - name: panSpeed
+                displayName: Pan Speed
+                type: Float
+                value: 30
+                defaultValue: 30
+              - name: panLimit
+                displayName: Pan Limit
+                type: Float
+                value: 32
+                defaultValue: 40
+              - name: groundHeight
+                displayName: Ground Height
+                type: Float
+                value: 3
+                defaultValue: 3
+              - name: pickRadius
+                displayName: Pick Radius
+                type: Float
+                value: 5
+                defaultValue: 5
+  - type: Entity
+    entity: 1006
+    name: Terrain
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      mesh:
+        submeshes:
+          - material:
+              baseColorFactor: [1, 1, 1, 1]
+              metallicFactor: 0
+              roughnessFactor: 1
+              alphaCutoff: 0.5
+              foliageTransmission: 0
+              alphaMode: AUTO
+              emissiveFactor: [0, 0, 0]
+              baseColorTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_color.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              metallicRoughnessTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              occlusionTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              normalTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_normal.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              baseColorTexCoord: 0
+              metallicRoughnessTexCoord: 0
+              occlusionTexCoord: 0
+              emissiveTexCoord: 0
+              normalTexCoord: 0
+              name: terrain
+            textureRect: [0, 0, 1, 1]
+            primitiveType: triangles
+            vertexCount: 6144
+            faceCulling: true
+            textureShadow: false
+            hasTexCoord1: false
+            hasTexCoord2: false
+            hasNormalMap: true
+            hasTangent: false
+            hasVertexColor3: false
+            hasVertexColor4: false
+            hasTextureRect: false
+            hasSkinning: false
+            hasMorphTarget: false
+            hasMorphNormal: false
+            hasMorphTangent: false
+          - material:
+              baseColorFactor: [1, 1, 1, 1]
+              metallicFactor: 0
+              roughnessFactor: 1
+              alphaCutoff: 0.5
+              foliageTransmission: 0
+              alphaMode: AUTO
+              emissiveFactor: [0, 0, 0]
+              baseColorTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_color.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              metallicRoughnessTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              occlusionTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              normalTexture:
+                textureType: 2D
+                source: path
+                path: terrain/grass_normal.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: false
+              baseColorTexCoord: 0
+              metallicRoughnessTexCoord: 0
+              occlusionTexCoord: 0
+              emissiveTexCoord: 0
+              normalTexCoord: 0
+              name: terrain
+            textureRect: [0, 0, 1, 1]
+            primitiveType: triangles
+            vertexCount: 1536
+            faceCulling: true
+            textureShadow: false
+            hasTexCoord1: false
+            hasTexCoord2: false
+            hasNormalMap: true
+            hasTangent: false
+            hasVertexColor3: false
+            hasVertexColor4: false
+            hasTextureRect: false
+            hasSkinning: false
+            hasMorphTarget: false
+            hasMorphNormal: false
+            hasMorphTangent: false
+        normAdjustJoint: 1
+        normAdjustWeight: 1
+        aabb:
+          min: [-65, 0, -65]
+          max: [65, 16, 65]
+        verticesAABB:
+          min: [0, 0, 0]
+          max: [0, 0, 0]
+        worldAABB:
+          min: [-65, 0, -65]
+          max: [65, 16, 65]
+        receiveLights: true
+        receiveIBL: false
+        castShadows: true
+        receiveShadows: true
+        lodEnabled: true
+        lodBias: 1
+        renderInReflectionProbes: true
+        shadowsBillboard: true
+        transparent: false
+        cullingMode: back
+        windingOrder: ccw
+      terrain:
+        heightMap:
+          textureType: 2D
+          source: path
+          path: terrain_maps/frost_hollow_height.png
+          minFilter: linear
+          magFilter: linear
+          wrapU: clamp_to_edge
+          wrapV: clamp_to_edge
+          releaseDataAfterLoad: false
+        blendMaps:
+          - textureType: 2D
+            source: path
+            path: terrain_maps/frost_hollow_blend0.png
+            minFilter: linear
+            magFilter: linear
+            wrapU: clamp_to_edge
+            wrapV: clamp_to_edge
+            releaseDataAfterLoad: false
+          - textureType: 2D
+            source: path
+            path: terrain_maps/frost_hollow_blend1.png
+            minFilter: linear
+            magFilter: linear
+            wrapU: clamp_to_edge
+            wrapV: clamp_to_edge
+            releaseDataAfterLoad: false
+        surfaceLayers:
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/dirt_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1, 1, 1, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [1, 1]
+            uvOffset: [0, 0]
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/rock_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1, 1, 1, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [0.55, 0.55]
+            uvOffset: [0, 0]
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/gravel_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1, 1, 1, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [1.2, 1.2]
+            uvOffset: [0, 0]
+          - pbr: true
+            colorTexture:
+              textureType: 2D
+              source: path
+              path: terrain/snow_color.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            normalTexture:
+              textureType: 2D
+              source: path
+              path: terrain/snow_normal.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            roughnessTexture:
+              textureType: 2D
+              source: path
+              path: terrain/snow_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            metallicTexture:
+              textureType: 2D
+              source: path
+              path: terrain/snow_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            occlusionTexture:
+              textureType: 2D
+              source: path
+              path: terrain/snow_orm.jpg
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            colorFactor: [1.12, 1.16, 1.24, 1]
+            normalStrength: 1
+            roughnessFactor: 1
+            metallicFactor: 0
+            occlusionStrength: 1
+            uvScale: [0.85, 0.85]
+            uvOffset: [0, 0]
+        autoSetRanges: true
+        offset: [0, 0]
+        terrainSize: 130
+        maxHeight: 16
+        resolution: 32
+        textureBaseTiles: 42
+        textureDetailTiles: 42
+        rootGridSize: 2
+        levels: 5
+        ranges:
+          - 8.125
+          - 16.25
+          - 32.5
+          - 65
+          - 2000
+    children:
+      - type: Entity
+        entity: 1570
+        name: snow-detail-crystal
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 0, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/snow-detail-crystal.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 204
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-57.053585, 1.4983, -58.455173]
+              max: [55.966583, 17.596985, 56.734425]
+            verticesAABB:
+              min: [-0.12559009, 8.0148267e-32, -0.14501894]
+              max: [0.12559009, 0.42499998, 0.14501894]
+            worldAABB:
+              min: [-57.053585, 1.4983, -58.455173]
+              max: [55.966583, 17.596985, 56.734425]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/snow-detail-crystal.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 13
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-20.4163, 1.4983, -40.2269]
+                rotation: [-0.790855, 0, 0.612004, 0]
+                scale: [4.2048, 4.2048, 4.2048]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-38.0912, 2.4018, -38.0238]
+                rotation: [-0.995476, 0, 0.095018, 0]
+                scale: [4.2162, 4.2162, 4.2162]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [52.5793, 13.4806, -19.5245]
+                rotation: [-0.931085, 0, 0.364803, 0]
+                scale: [4.4877, 4.4877, 4.4877]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-7.714, 2.3819, -30.7881]
+                rotation: [0.990442, 0, 0.137933, 0]
+                scale: [4.2822, 4.2822, 4.2822]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [55.4918, 14.2655, 29.4133]
+                rotation: [-0.115972, 0, 0.993252, 0]
+                scale: [3.0509, 3.0509, 3.0509]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-56.5319, 13.2988, -10.5567]
+                rotation: [-0.16819, 0, 0.985755, 0]
+                scale: [3.1319, 3.1319, 3.1319]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-20.9469, 2.818, -24.3109]
+                rotation: [0.774468, 0, 0.632613, 0]
+                scale: [4.27, 4.27, 4.27]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [12.6813, 13.0301, 51.2576]
+                rotation: [-0.965446, 0, 0.260603, 0]
+                scale: [3.4552, 3.4552, 3.4552]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [34.1562, 15.7728, 55.9642]
+                rotation: [-0.858954, 0, 0.512053, 0]
+                scale: [4.2922, 4.2922, 4.2922]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [35.7075, 15.292, -57.7323]
+                rotation: [0.228651, 0, 0.973508, 0]
+                scale: [3.8913, 3.8913, 3.8913]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [14.9677, 3.2065, 33.5969]
+                rotation: [-0.881941, 0, 0.47136, 0]
+                scale: [3.1303, 3.1303, 3.1303]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-14.8224, 2.9963, -15.5433]
+                rotation: [0.995814, 0, 0.0914, 0]
+                scale: [4.165, 4.165, 4.165]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-18.0965, 3.0121, -18.7213]
+                rotation: [-0.42471, 0, 0.905329, 0]
+                scale: [3.3655, 3.3655, 3.3655]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1569
+        name: snow-detail-tree-large
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 0, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/snow-detail-tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-59.347343, 1.4298, -58.394753]
+              max: [59.012405, 20.009905, 57.02132]
+            verticesAABB:
+              min: [-0.25, 0, -0.25]
+              max: [0.25, 0.76, 0.25]
+            worldAABB:
+              min: [-59.347343, 1.4298, -58.394753]
+              max: [59.012405, 20.009905, 57.02132]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/snow-detail-tree-large.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 23
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [53.4734, 13.7007, 23.1775]
+                rotation: [-0.407294, 0, 0.913297, 0]
+                scale: [4.2546, 4.2546, 4.2546]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-26.3938, 1.4298, -37.9967]
+                rotation: [0.22566, 0, 0.974206, 0]
+                scale: [4.1847, 4.1847, 4.1847]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [51.3381, 14.6697, -47.8937]
+                rotation: [-0.90889, 0, 0.417036, 0]
+                scale: [5.8515, 5.8515, 5.8515]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-26.5524, 2.2404, -31.2349]
+                rotation: [-0.922033, 0, 0.387112, 0]
+                scale: [3.7154, 3.7154, 3.7154]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [6.6968, 2.5089, -38.8141]
+                rotation: [0.903526, 0, 0.428533, 0]
+                scale: [6.4265, 6.4265, 6.4265]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [57.9073, 15.1059, 52.5034]
+                rotation: [-0.999984, 0, 0.005722, 0]
+                scale: [4.3707, 4.3707, 4.3707]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-40.1587, 2.8904, -30.7041]
+                rotation: [0.903865, 0, 0.427819, 0]
+                scale: [5.5432, 5.5432, 5.5432]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-21.5475, 2.0572, -32.4514]
+                rotation: [0.980984, 0, 0.194088, 0]
+                scale: [3.6147, 3.6147, 3.6147]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-58.2655, 13.0877, -15.1229]
+                rotation: [-0.782483, 0, 0.622672, 0]
+                scale: [3.6091, 3.6091, 3.6091]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-5.4374, 2.4063, -39.4558]
+                rotation: [-0.229961, 0, 0.9732, 0]
+                scale: [5.2448, 5.2448, 5.2448]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-15.8438, 13.1551, -57.137]
+                rotation: [0.192155, 0, 0.981365, 0]
+                scale: [3.8602, 3.8602, 3.8602]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-11.7334, 2.9547, -41.9594]
+                rotation: [0.373549, 0, 0.927611, 0]
+                scale: [6.4584, 6.4584, 6.4584]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-38.1955, 2.9068, -22.2246]
+                rotation: [0.966341, 0, 0.257263, 0]
+                scale: [6.1884, 6.1884, 6.1884]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [18.4527, 2.8153, -33.5713]
+                rotation: [0.294033, 0, 0.955795, 0]
+                scale: [5.8908, 5.8908, 5.8908]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-29.6937, 3.1073, 35.5014]
+                rotation: [-0.554151, 0, 0.832416, 0]
+                scale: [5.0912, 5.0912, 5.0912]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [29.0947, 15.4111, 55.9588]
+                rotation: [0.055447, 0, 0.998462, 0]
+                scale: [3.8477, 3.8477, 3.8477]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-51.9722, 14.8271, -42.0742]
+                rotation: [-0.473595, 0, 0.880743, 0]
+                scale: [4.3877, 4.3877, 4.3877]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [45.1004, 15.5579, -52.6596]
+                rotation: [-0.749223, 0, 0.662318, 0]
+                scale: [5.8579, 5.8579, 5.8579]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [39.1989, 2.437, 23.5431]
+                rotation: [0.766014, 0, 0.642824, 0]
+                scale: [3.802, 3.802, 3.802]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-51.8863, 12.7465, -19.7011]
+                rotation: [-0.014483, 0, 0.999895, 0]
+                scale: [4.5154, 4.5154, 4.5154]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [50.9598, 14.2698, -38.4298]
+                rotation: [-0.806668, 0, 0.591005, 0]
+                scale: [5.7026, 5.7026, 5.7026]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [55.2059, 15.2012, -34.6428]
+                rotation: [0.978009, 0, 0.208563, 0]
+                scale: [4.4175, 4.4175, 4.4175]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-42.4317, 4.1538, -25.8099]
+                rotation: [0.677432, 0, 0.735585, 0]
+                scale: [6.2066, 6.2066, 6.2066]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1568
+        name: snow-detail-dirt
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 0, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/snow-detail-dirt.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 696
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-57.22978, 2.6402, -56.803783]
+              max: [55.727837, 16.498621, 54.313744]
+            verticesAABB:
+              min: [-0.36090803, -4.5119463e-17, -0.34007776]
+              max: [0.34185794, 0.2653095, 0.3719515]
+            worldAABB:
+              min: [-57.22978, 2.6402, -56.803783]
+              max: [55.727837, 16.498621, 54.313744]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/snow-detail-dirt.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 18
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [53.793, 14.8317, 41.3939]
+                rotation: [-0.219429, 0, 0.975628, 0]
+                scale: [3.1685, 3.1685, 3.1685]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [19.399, 14.6098, -54.9168]
+                rotation: [-0.965834, 0, 0.259162, 0]
+                scale: [3.972, 3.972, 3.972]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8.3936, 11.8461, -51.0322]
+                rotation: [0.769541, 0, 0.638597, 0]
+                scale: [4.3877, 4.3877, 4.3877]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-55.0713, 14.2013, -24.42]
+                rotation: [0.922271, 0, 0.386545, 0]
+                scale: [4.0122, 4.0122, 4.0122]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [53.7517, 15.3524, 51.3205]
+                rotation: [0.897479, 0, 0.441056, 0]
+                scale: [3.9262, 3.9262, 3.9262]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-55.6784, 15.5854, -36.9568]
+                rotation: [0.542245, 0, 0.84022, 0]
+                scale: [3.4421, 3.4421, 3.4421]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [21.0147, 4.8833, 41.8851]
+                rotation: [0.899208, 0, 0.437522, 0]
+                scale: [3.1078, 3.1078, 3.1078]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [39.994, 2.6402, 28.9349]
+                rotation: [-0.901153, 0, 0.433501, 0]
+                scale: [3.5143, 3.5143, 3.5143]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [53.3368, 14.545, -27.1609]
+                rotation: [0.940714, 0, 0.339201, 0]
+                scale: [4.0104, 4.0104, 4.0104]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [28.7333, 3.23, -29.975]
+                rotation: [0.683502, 0, 0.729949, 0]
+                scale: [3.2509, 3.2509, 3.2509]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-28.3197, 3.2074, 40.4557]
+                rotation: [0.647988, 0, 0.761651, 0]
+                scale: [3.9281, 3.9281, 3.9281]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [3.7344, 3.7226, -42.1505]
+                rotation: [0.700617, 0, 0.713538, 0]
+                scale: [3.6887, 3.6887, 3.6887]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [2.0883, 3.381, 42.5672]
+                rotation: [0.308479, 0, 0.951231, 0]
+                scale: [3.0863, 3.0863, 3.0863]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [34.1384, 5.139, -41.6251]
+                rotation: [-0.069295, 0, 0.997596, 0]
+                scale: [4.17, 4.17, 4.17]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [4.9507, 13.055, 52.4219]
+                rotation: [0.431739, 0, 0.901998, 0]
+                scale: [3.8266, 3.8266, 3.8266]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-44.345, 14.0087, -52.4518]
+                rotation: [0.893561, 0, 0.448942, 0]
+                scale: [4.1304, 4.1304, 4.1304]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [25.6566, 3.296, 33.8107]
+                rotation: [0.176444, 0, 0.984311, 0]
+                scale: [4.4209, 4.4209, 4.4209]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [49.6225, 15.229, -52.3457]
+                rotation: [-0.581237, 0, 0.813735, 0]
+                scale: [4.4461, 4.4461, 4.4461]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1567
+        name: snow-detail-tree
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 0, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/snow-detail-tree.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 504
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-57.96055, 1.9101, -58.469994]
+              max: [58.80136, 18.449205, 57.165142]
+            verticesAABB:
+              min: [-0.175, 0, -0.175]
+              max: [0.175, 0.532, 0.175]
+            worldAABB:
+              min: [-57.96055, 1.9101, -58.469994]
+              max: [58.80136, 18.449205, 57.165142]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/snow-detail-tree.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 43
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [37.8333, 3.8191, -32.4058]
+                rotation: [-0.436353, 0, 0.899776, 0]
+                scale: [4.075, 4.075, 4.075]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [35.154, 3.1532, 38.7551]
+                rotation: [-0.50396, 0, 0.863727, 0]
+                scale: [4.5188, 4.5188, 4.5188]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-44.5132, 14.3873, -57.2567]
+                rotation: [0.926259, 0, 0.376888, 0]
+                scale: [4.372, 4.372, 4.372]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-32.7176, 13.5169, -55.2616]
+                rotation: [-0.282268, 0, 0.959336, 0]
+                scale: [5.4267, 5.4267, 5.4267]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [39.4914, 2.9665, 38.7777]
+                rotation: [-0.970062, 0, 0.242856, 0]
+                scale: [4.6137, 4.6137, 4.6137]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [52.5418, 15.6719, 55.6706]
+                rotation: [-0.043414, 0, 0.999057, 0]
+                scale: [5.2205, 5.2205, 5.2205]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [31.5844, 3.1554, 35.5487]
+                rotation: [0.966145, 0, 0.257999, 0]
+                scale: [4.4113, 4.4113, 4.4113]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-56.9181, 13.3025, -6.5617]
+                rotation: [0.611477, 0, 0.791262, 0]
+                scale: [4.8832, 4.8832, 4.8832]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-14.3454, 1.9101, -36.7192]
+                rotation: [0.927103, 0, 0.374807, 0]
+                scale: [3.2495, 3.2495, 3.2495]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [32.5136, 15.4784, -55.3212]
+                rotation: [-0.500564, 0, 0.8657, 0]
+                scale: [3.6517, 3.6517, 3.6517]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [32.122, 14.9175, 52.3189]
+                rotation: [0.100991, 0, 0.994887, 0]
+                scale: [4.6858, 4.6858, 4.6858]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-39.9042, 2.8142, 38.7494]
+                rotation: [0.999786, 0, 0.020678, 0]
+                scale: [5.0017, 5.0017, 5.0017]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [35.8795, 4.1182, -37.3336]
+                rotation: [-0.14306, 0, 0.989714, 0]
+                scale: [3.7336, 3.7336, 3.7336]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [26.2583, 15.1366, -57.1134]
+                rotation: [-0.73219, 0, 0.681101, 0]
+                scale: [4.9795, 4.9795, 4.9795]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-9.8091, 12.9999, 54.6252]
+                rotation: [0.968162, 0, 0.250325, 0]
+                scale: [3.6439, 3.6439, 3.6439]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8.7913, 13.2333, -55.6421]
+                rotation: [-0.815891, 0, 0.578206, 0]
+                scale: [4.5493, 4.5493, 4.5493]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-2.8368, 2.4748, -32.8459]
+                rotation: [-0.767128, 0, 0.641494, 0]
+                scale: [3.3145, 3.3145, 3.3145]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [57.8182, 14.9332, -43.7879]
+                rotation: [0.917508, 0, 0.397718, 0]
+                scale: [3.9747, 3.9747, 3.9747]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [17.1929, 2.7908, 25.6228]
+                rotation: [0.432168, 0, 0.901793, 0]
+                scale: [3.2609, 3.2609, 3.2609]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-16.5352, 11.8021, 51.5679]
+                rotation: [-0.554031, 0, 0.832496, 0]
+                scale: [4.6914, 4.6914, 4.6914]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8.4554, 3.6822, 41.8726]
+                rotation: [-0.384035, 0, 0.923318, 0]
+                scale: [4.3526, 4.3526, 4.3526]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-10.171, 3.063, -9.3579]
+                rotation: [-0.161253, 0, 0.986913, 0]
+                scale: [5.0883, 5.0883, 5.0883]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-52.535, 13.0275, -3.8266]
+                rotation: [-0.95994, 0, 0.280204, 0]
+                scale: [5.1352, 5.1352, 5.1352]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-54.2648, 15.3717, 55.9736]
+                rotation: [0.985679, 0, 0.168634, 0]
+                scale: [5.3379, 5.3379, 5.3379]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [5.2379, 13.1234, -52.1977]
+                rotation: [-0.247782, 0, 0.968816, 0]
+                scale: [4.782, 4.782, 4.782]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-32.4108, 3.0749, 30.2908]
+                rotation: [-0.96775, 0, 0.251912, 0]
+                scale: [5.1543, 5.1543, 5.1543]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-32.8147, 12.7132, 51.8828]
+                rotation: [0.595163, 0, 0.803605, 0]
+                scale: [4.614, 4.614, 4.614]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-5.5663, 12.2939, 52.2342]
+                rotation: [0.377996, 0, 0.925807, 0]
+                scale: [5.0388, 5.0388, 5.0388]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [13.5166, 2.6415, -34.466]
+                rotation: [-0.974241, 0, 0.225511, 0]
+                scale: [3.5988, 3.5988, 3.5988]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [35.6961, 2.7426, 31.7805]
+                rotation: [0.176798, 0, 0.984247, 0]
+                scale: [3.5394, 3.5394, 3.5394]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-56.6383, 15.8311, -41.294]
+                rotation: [-0.967191, 0, 0.254051, 0]
+                scale: [3.2376, 3.2376, 3.2376]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [10.1072, 2.9321, 36.252]
+                rotation: [0.682539, 0, 0.73085, 0]
+                scale: [3.3118, 3.3118, 3.3118]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-0.7719, 13.5452, -55.5665]
+                rotation: [-0.674959, 0, 0.737855, 0]
+                scale: [4.6876, 4.6876, 4.6876]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-52.1435, 13.2962, 41.3865]
+                rotation: [0.932211, 0, 0.361914, 0]
+                scale: [3.0204, 3.0204, 3.0204]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-56.2284, 15.0909, -57.1835]
+                rotation: [0.247608, 0, 0.96886, 0]
+                scale: [5.4167, 5.4167, 5.4167]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [33.339, 3.0045, -24.3995]
+                rotation: [0.360758, 0, 0.93266, 0]
+                scale: [4.5989, 4.5989, 4.5989]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-43.0095, 4.4666, -17.4443]
+                rotation: [-0.667237, 0, 0.744845, 0]
+                scale: [3.5096, 3.5096, 3.5096]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [2.5289, 2.5566, -36.5309]
+                rotation: [-0.987937, 0, 0.154858, 0]
+                scale: [3.9635, 3.9635, 3.9635]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-0.7185, 12.2179, 51.7609]
+                rotation: [0.896797, 0, 0.442442, 0]
+                scale: [3.4074, 3.4074, 3.4074]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-51.3895, 15.0091, -55.3112]
+                rotation: [0.982704, 0, 0.185185, 0]
+                scale: [3.9107, 3.9107, 3.9107]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [56.1454, 15.2864, 46.9831]
+                rotation: [0.457611, 0, 0.889153, 0]
+                scale: [3.2996, 3.2996, 3.2996]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [56.0176, 15.3472, -51.5685]
+                rotation: [0.272252, 0, 0.962226, 0]
+                scale: [3.1748, 3.1748, 3.1748]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [31.923, 2.816, -20.4619]
+                rotation: [-0.243917, 0, 0.969796, 0]
+                scale: [3.6109, 3.6109, 3.6109]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1566
+        name: snow-detail-rocks
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 0, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/snow-detail-rocks.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 552
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-57.978355, 1.6685, -57.240948]
+              max: [59.699986, 16.756123, 59.94802]
+            verticesAABB:
+              min: [-0.29565424, -4.0607517e-16, -0.32069832]
+              max: [0.30188286, 0.18445, 0.28477228]
+            worldAABB:
+              min: [-57.978355, 1.6685, -57.240948]
+              max: [59.699986, 16.756123, 59.94802]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/snow-detail-rocks.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 25
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [22.6951, 14.8681, 56.149]
+                rotation: [0.997075, 0, 0.07643, 0]
+                scale: [3.0111, 3.0111, 3.0111]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [40.1806, 15.9187, 57.9684]
+                rotation: [0.37626, 0, 0.926514, 0]
+                scale: [4.5401, 4.5401, 4.5401]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-21.8883, 2.7559, 38.0898]
+                rotation: [0.854324, 0, 0.519741, 0]
+                scale: [3.0173, 3.0173, 3.0173]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [53.4711, 15.3969, -55.7869]
+                rotation: [-0.704341, 0, 0.709862, 0]
+                scale: [4.8815, 4.8815, 4.8815]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [20.3429, 3.0342, -40.606]
+                rotation: [0.372742, 0, 0.927935, 0]
+                scale: [4.4737, 4.4737, 4.4737]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [28.0812, 3.3704, -36.0444]
+                rotation: [-0.796553, 0, 0.604569, 0]
+                scale: [4.5268, 4.5268, 4.5268]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [10.2243, 2.8835, 24.2269]
+                rotation: [-0.99679, 0, 0.080056, 0]
+                scale: [4.0902, 4.0902, 4.0902]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [58.2944, 14.3719, 35.215]
+                rotation: [0.18186, 0, 0.983324, 0]
+                scale: [3.719, 3.719, 3.719]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-30.3141, 2.4744, -29.7717]
+                rotation: [-0.995224, 0, 0.097619, 0]
+                scale: [4.8311, 4.8311, 4.8311]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [55.0059, 13.7634, -12.6155]
+                rotation: [-0.505917, 0, 0.862582, 0]
+                scale: [3.7967, 3.7967, 3.7967]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-31.7449, 1.6685, -39.8348]
+                rotation: [0.869233, 0, 0.494403, 0]
+                scale: [4.2076, 4.2076, 4.2076]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-1.6113, 2.8834, -40.7049]
+                rotation: [-0.008045, 0, 0.999968, 0]
+                scale: [4.9618, 4.9618, 4.9618]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-36.2185, 2.9312, 36.1934]
+                rotation: [-0.999582, 0, 0.028921, 0]
+                scale: [3.6111, 3.6111, 3.6111]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-44.4313, 14.0866, 53.0624]
+                rotation: [-0.856217, 0, 0.516616, 0]
+                scale: [4.7268, 4.7268, 4.7268]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-2.1241, 13.4922, 57.5352]
+                rotation: [-0.682736, 0, 0.730665, 0]
+                scale: [3.1885, 3.1885, 3.1885]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-23.4465, 3.3085, -17.0584]
+                rotation: [0.330734, 0, 0.943724, 0]
+                scale: [3.2809, 3.2809, 3.2809]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [21.5807, 3.4992, 35.4401]
+                rotation: [-0.548158, 0, 0.836374, 0]
+                scale: [3.8889, 3.8889, 3.8889]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-31.3794, 2.9952, 22.1636]
+                rotation: [0.028324, 0, 0.999599, 0]
+                scale: [3.7216, 3.7216, 3.7216]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-3.1831, 2.7855, 42.2745]
+                rotation: [0.416833, 0, 0.908983, 0]
+                scale: [4.2409, 4.2409, 4.2409]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-54.7439, 13.6802, 0.3352]
+                rotation: [0.502339, 0, 0.864671, 0]
+                scale: [4.2014, 4.2014, 4.2014]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8.4808, 2.9568, 15.6964]
+                rotation: [0.445592, 0, 0.895236, 0]
+                scale: [3.7438, 3.7438, 3.7438]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-15.3416, 12.871, 55.8419]
+                rotation: [-0.63544, 0, 0.77215, 0]
+                scale: [4.0077, 4.0077, 4.0077]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-9.3721, 2.1943, -37.2814]
+                rotation: [-0.468227, 0, 0.883608, 0]
+                scale: [4.8061, 4.8061, 4.8061]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-24.7252, 12.9596, 54.8012]
+                rotation: [-0.935199, 0, 0.354122, 0]
+                scale: [4.3201, 4.3201, 4.3201]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-56.871, 13.9831, 11.51]
+                rotation: [0.066624, 0, 0.997778, 0]
+                scale: [3.2394, 3.2394, 3.2394]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1565
+        name: snow-detail-rocks-large
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [0, 0, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/snow-detail-rocks-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 696
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-61.270382, 2.2426, -59.64679]
+              max: [60.022686, 17.436567, 60.00425]
+            verticesAABB:
+              min: [-0.43387473, -4.5119463e-17, -0.41781396]
+              max: [0.45830482, 0.4145461, 0.44152346]
+            worldAABB:
+              min: [-61.270382, 2.2426, -59.64679]
+              max: [60.022686, 17.436567, 60.00425]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/snow-detail-rocks-large.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 14
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [58.1351, 13.551, 23.595]
+                rotation: [-0.743493, 0, 0.668744, 0]
+                scale: [4.0693, 4.0693, 4.0693]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-53.7537, 14.5917, 48.5176]
+                rotation: [-0.194182, 0, 0.980966, 0]
+                scale: [5.1029, 5.1029, 5.1029]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [9.2941, 13.5871, 58.1532]
+                rotation: [0.612168, 0, 0.790728, 0]
+                scale: [3.5278, 3.5278, 3.5278]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [33.95, 3.4464, -30.4452]
+                rotation: [-0.888879, 0, 0.458141, 0]
+                scale: [4.7663, 4.7663, 4.7663]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [5.4345, 13.8313, -56.9507]
+                rotation: [0.233389, 0, 0.972384, 0]
+                scale: [4.4827, 4.4827, 4.4827]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-27.3369, 11.5747, 50.5721]
+                rotation: [-0.439212, 0, 0.898383, 0]
+                scale: [4.4822, 4.4822, 4.4822]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8.7983, 2.5891, -34.5832]
+                rotation: [-0.405096, 0, 0.914274, 0]
+                scale: [4.5376, 4.5376, 4.5376]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-4.1908, 12.6645, -51.9267]
+                rotation: [-0.533201, 0, 0.845988, 0]
+                scale: [4.322, 4.322, 4.322]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-57.6678, 14.215, 37.8641]
+                rotation: [0.857535, 0, 0.514426, 0]
+                scale: [4.8067, 4.8067, 4.8067]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-34.5952, 2.2426, -34.4258]
+                rotation: [-0.459946, 0, 0.887947, 0]
+                scale: [4.0209, 4.0209, 4.0209]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-57.4098, 13.6062, 3.6713]
+                rotation: [-0.890569, 0, 0.454848, 0]
+                scale: [4.9791, 4.9791, 4.9791]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [2.2055, 13.5927, 55.355]
+                rotation: [-0.999995, 0, 0.003053, 0]
+                scale: [3.633, 3.633, 3.633]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-13.8717, 2.335, 40.8841]
+                rotation: [-0.349377, 0, 0.936982, 0]
+                scale: [4.443, 4.443, 4.443]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-58.1664, 15.2636, -51.6909]
+                rotation: [0.497277, 0, 0.867592, 0]
+                scale: [5.2418, 5.2418, 5.2418]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+  - type: Entity
+    entity: 1008
+    name: Spawn
+    components:
+      transform:
+        position: [-60, 3, 26]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [-60, 3, 26]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-60, 3, 26, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-60, 3, 26, 1]]
+        normalMatrix: [[1, 0, 0, 60], [0, 1, 0, -3], [0, 0, 1, -26], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1112
+        name: Spawn Pad
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [9.6, 9.6, 9.6]
+            worldPosition: [-60, 3, 26]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [9.6, 9.6, 9.6]
+            localMatrix: [[9.6, 0, 0, 0], [0, 9.6, 0, 0], [0, 0, 9.6, 0], [0, 0, 0, 1]]
+            modelMatrix: [[9.6, 0, 0, 0], [0, 9.6, 0, 0], [0, 0, 9.6, 0], [-60, 3, 26, 1]]
+            normalMatrix: [[0.10416666, 0, 0, 6.2499995], [0, 0.10416666, 0, -0.31249997], [0, 0, 0.10416666, -2.7083333], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/spawn-round.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 564
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.34375, 0, -0.34375]
+              max: [0.34375, 0.10000001, 0.34375]
+            verticesAABB:
+              min: [-0.34375, 0, -0.34375]
+              max: [0.34375, 0.10000001, 0.34375]
+            worldAABB:
+              min: [-63.3, 3, 22.7]
+              max: [-56.7, 3.96, 29.3]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/spawn-round.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1113
+        name: Spawn Marker
+        components:
+          transform:
+            position: [0, 0.2, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [5.6, 5.6, 5.6]
+            worldPosition: [-60, 3.2, 26]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [5.6, 5.6, 5.6]
+            localMatrix: [[5.6, 0, 0, 0], [0, 5.6, 0, 0], [0, 0, 5.6, 0], [0, 0.2, 0, 1]]
+            modelMatrix: [[5.6, 0, 0, 0], [0, 5.6, 0, 0], [0, 0, 5.6, 0], [-60, 3.2, 26, 1]]
+            normalMatrix: [[0.17857143, 0, 0, 10.714286], [0, 0.17857143, 0, -0.5714286], [0, 0, 0.17857143, -4.642857], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/tile-crystal.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1380
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.75181973, 0.5]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.75181973, 0.5]
+            worldAABB:
+              min: [-62.8, 3.2, 23.2]
+              max: [-57.2, 7.4101906, 28.8]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/tile-crystal.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1114
+        name: Portal
+        components:
+          transform:
+            position: [0, 0.5, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-60, 3.5, 26]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0.5, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-60, 3.5, 26, 1]]
+            normalMatrix: [[1, 0, 0, 60], [0, 1, 0, -3.5], [0, 0, 1, -26], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+        children:
+          - type: Entity
+            entity: 1115
+            name: Points
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [-60, 3.5, 26]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [1, 1, 1]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-60, 3.5, 26, 1]]
+                normalMatrix: [[1, 0, 0, 60], [0, 1, 0, -3.5], [0, 0, 1, -26], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              points:
+                maxPoints: 90
+                transparent: true
+                autoTransparency: true
+                texture:
+                  textureType: 2D
+                  source: path
+                  path: particles/magic_05.png
+                  minFilter: linear
+                  magFilter: linear
+                  wrapU: clamp_to_edge
+                  wrapV: clamp_to_edge
+                  releaseDataAfterLoad: true
+                points: ~
+  - type: Entity
+    entity: 1010
+    name: Road
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1136
+        name: Waypoint 1
+        components:
+          transform:
+            position: [-60, 3, 26]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-60, 3, 26]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-60, 3, 26, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-60, 3, 26, 1]]
+            normalMatrix: [[1, 0, 0, 60], [0, 1, 0, -3], [0, 0, 1, -26], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1137
+        name: Waypoint 2
+        components:
+          transform:
+            position: [-40, 3, 26]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-40, 3, 26]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-40, 3, 26, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-40, 3, 26, 1]]
+            normalMatrix: [[1, 0, 0, 40], [0, 1, 0, -3], [0, 0, 1, -26], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1138
+        name: Waypoint 3
+        components:
+          transform:
+            position: [-40, 3, -8]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-40, 3, -8]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-40, 3, -8, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-40, 3, -8, 1]]
+            normalMatrix: [[1, 0, 0, 40], [0, 1, 0, -3], [0, 0, 1, 8], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1139
+        name: Waypoint 4
+        components:
+          transform:
+            position: [-20, 3, -8]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-20, 3, -8]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-20, 3, -8, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-20, 3, -8, 1]]
+            normalMatrix: [[1, 0, 0, 20], [0, 1, 0, -3], [0, 0, 1, 8], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1140
+        name: Waypoint 5
+        components:
+          transform:
+            position: [-20, 3, 28]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-20, 3, 28]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-20, 3, 28, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-20, 3, 28, 1]]
+            normalMatrix: [[1, 0, 0, 20], [0, 1, 0, -3], [0, 0, 1, -28], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1141
+        name: Waypoint 6
+        components:
+          transform:
+            position: [-1, 3, 28]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-1, 3, 28]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-1, 3, 28, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-1, 3, 28, 1]]
+            normalMatrix: [[1, 0, 0, 1], [0, 1, 0, -3], [0, 0, 1, -28], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1142
+        name: Waypoint 7
+        components:
+          transform:
+            position: [-1, 3, -24]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-1, 3, -24]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-1, 3, -24, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-1, 3, -24, 1]]
+            normalMatrix: [[1, 0, 0, 1], [0, 1, 0, -3], [0, 0, 1, 24], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1143
+        name: Waypoint 8
+        components:
+          transform:
+            position: [17, 3, -24]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [17, 3, -24]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [17, 3, -24, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [17, 3, -24, 1]]
+            normalMatrix: [[1, 0, 0, -17], [0, 1, 0, -3], [0, -0, 1, 24], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1144
+        name: Waypoint 9
+        components:
+          transform:
+            position: [17, 3, 16]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [17, 3, 16]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [17, 3, 16, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [17, 3, 16, 1]]
+            normalMatrix: [[1, 0, 0, -17], [0, 1, 0, -3], [0, 0, 1, -16], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1145
+        name: Waypoint 10
+        components:
+          transform:
+            position: [33, 3, 16]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [33, 3, 16]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [33, 3, 16, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [33, 3, 16, 1]]
+            normalMatrix: [[1, 0, 0, -33], [0, 1, 0, -3], [0, 0, 1, -16], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1146
+        name: Waypoint 11
+        components:
+          transform:
+            position: [33, 3, -12]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [33, 3, -12]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [33, 3, -12, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [33, 3, -12, 1]]
+            normalMatrix: [[1, 0, 0, -33], [0, 1, 0, -3], [0, -0, 1, 12], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1147
+        name: Waypoint 12
+        components:
+          transform:
+            position: [46, 3, -12]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [46, 3, -12]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 3, -12, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 3, -12, 1]]
+            normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -3], [0, -0, 1, 12], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1148
+        name: Waypoint 13
+        components:
+          transform:
+            position: [46, 3, 4]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [46, 3, 4]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 3, 4, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 3, 4, 1]]
+            normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -3], [0, 0, 1, -4], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+      - type: Entity
+        entity: 1149
+        name: Waypoint 14
+        components:
+          transform:
+            position: [46, 3, 6]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [46, 3, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 3, 6, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 3, 6, 1]]
+            normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -3], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+  - type: Entity
+    entity: 1011
+    name: Pads
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [0, 0, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normalMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1612
+        name: Pad 1
+        components:
+          transform:
+            position: [-50, 3, 8]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-50, 3, 8]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-50, 3, 8, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-50, 3, 8, 1]]
+            normalMatrix: [[1, 0, 0, 50], [0, 1, 0, -3], [0, 0, 1, -8], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1621
+        name: Pad 2
+        components:
+          transform:
+            position: [-30, 3, 10]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-30, 3, 10]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-30, 3, 10, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-30, 3, 10, 1]]
+            normalMatrix: [[1, 0, 0, 30], [0, 1, 0, -3], [0, 0, 1, -10], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1630
+        name: Pad 3
+        components:
+          transform:
+            position: [-30, 3, -22]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-30, 3, -22]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-30, 3, -22, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-30, 3, -22, 1]]
+            normalMatrix: [[1, 0, 0, 30], [0, 1, 0, -3], [0, 0, 1, 22], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1639
+        name: Pad 4
+        components:
+          transform:
+            position: [-10, 3, 6]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-10, 3, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-10, 3, 6, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-10, 3, 6, 1]]
+            normalMatrix: [[1, 0, 0, 10], [0, 1, 0, -3], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1648
+        name: Pad 5
+        components:
+          transform:
+            position: [-10, 3, -22]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-10, 3, -22]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-10, 3, -22, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-10, 3, -22, 1]]
+            normalMatrix: [[1, 0, 0, 10], [0, 1, 0, -3], [0, 0, 1, 22], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1657
+        name: Pad 6
+        components:
+          transform:
+            position: [7, 3, 4]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [7, 3, 4]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [7, 3, 4, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [7, 3, 4, 1]]
+            normalMatrix: [[1, 0, 0, -7], [0, 1, 0, -3], [0, 0, 1, -4], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1666
+        name: Pad 7
+        components:
+          transform:
+            position: [7, 3, -8]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [7, 3, -8]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [7, 3, -8, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [7, 3, -8, 1]]
+            normalMatrix: [[1, 0, 0, -7], [0, 1, 0, -3], [0, -0, 1, 8], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1675
+        name: Pad 8
+        components:
+          transform:
+            position: [25, 3, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [25, 3, 0]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [25, 3, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [25, 3, 0, 1]]
+            normalMatrix: [[1, 0, 0, -25], [0, 1, 0, -3], [0, 0, 1, 0], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1684
+        name: Pad 9
+        components:
+          transform:
+            position: [25, 3, 26]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [25, 3, 26]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [25, 3, 26, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [25, 3, 26, 1]]
+            normalMatrix: [[1, 0, 0, -25], [0, 1, 0, -3], [0, 0, 1, -26], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+      - type: Entity
+        entity: 1693
+        name: Pad 10
+        components:
+          transform:
+            position: [39, 3, -2]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [39, 3, -2]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [39, 3, -2, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [39, 3, -2, 1]]
+            normalMatrix: [[1, 0, 0, -39], [0, 1, 0, -3], [0, -0, 1, 2], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          bundle:
+            name: BuildPad
+            path: bundles/BuildPad.bundle
+  - type: Entity
+    entity: 1602
+    name: Keep
+    components:
+      transform:
+        position: [54, 0, 6]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [54, 0, 6]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+        normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      bundle:
+        name: Keep
+        path: bundles/Keep.bundle
+  - type: Entity
+    entity: 1783
+    name: Ground
+    components:
+      transform:
+        position: [0, 1.6, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [5, 1, 5]
+        worldPosition: [0, 1.6, 0]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [5, 1, 5]
+        localMatrix: [[5, 0, 0, 0], [0, 1, 0, 0], [0, 0, 5, 0], [0, 1.6, 0, 1]]
+        modelMatrix: [[5, 0, 0, 0], [0, 1, 0, 0], [0, 0, 5, 0], [0, 1.6, 0, 1]]
+        normalMatrix: [[0.19999999, 0, 0, 0], [0, 1, 0, -1.5999999], [0, 0, 0.19999999, 0], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      mesh:
+        buffer:
+          type: vertex_buffer
+          usage: immutable
+          stride: 48
+          size: 192
+          count: 4
+          renderAttributes: true
+          instanceBuffer: false
+          attributes:
+            - type: position
+              dataType: float
+              bufferName: ""
+              elements: 3
+              offset: 0
+              count: 4
+              normalized: true
+              perInstance: false
+            - type: texcoord1
+              dataType: float
+              bufferName: ""
+              elements: 2
+              offset: 12
+              count: 4
+              normalized: true
+              perInstance: false
+            - type: normal
+              dataType: float
+              bufferName: ""
+              elements: 3
+              offset: 20
+              count: 4
+              normalized: true
+              perInstance: false
+            - type: color
+              dataType: float
+              bufferName: ""
+              elements: 4
+              offset: 32
+              count: 4
+              normalized: true
+              perInstance: false
+          data: AABIwgAAAAAAAEjCAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AABIwgAAAAAAAEhCAAAAAAAAyEIAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AABIQgAAAAAAAEhCAADIQgAAyEIAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AABIQgAAAAAAAEjCAADIQgAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/
+          vertexSize: 48
+        indices:
+          type: index_buffer
+          usage: immutable
+          stride: 2
+          size: 12
+          count: 6
+          renderAttributes: true
+          instanceBuffer: false
+          attributes:
+            - type: index
+              dataType: unsigned_short
+              bufferName: ""
+              elements: 1
+              offset: 0
+              count: 6
+              normalized: true
+              perInstance: false
+          data: AAABAAIAAAACAAMA
+        eBuffers: ~
+        submeshes:
+          - material:
+              baseColorFactor: [1, 1, 1, 1]
+              metallicFactor: 0
+              roughnessFactor: 1
+              alphaCutoff: 0.5
+              foliageTransmission: 0
+              alphaMode: AUTO
+              emissiveFactor: [0, 0, 0]
+              baseColorTexture:
+                textureType: 2D
+                source: path
+                path: terrain/snow_color.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              metallicRoughnessTexture:
+                textureType: 2D
+                source: path
+                path: terrain/snow_orm.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              normalTexture:
+                textureType: 2D
+                source: path
+                path: terrain/snow_normal.jpg
+                minFilter: linear
+                magFilter: linear
+                wrapU: repeat
+                wrapV: repeat
+                releaseDataAfterLoad: true
+              baseColorTexCoord: 0
+              metallicRoughnessTexCoord: 0
+              occlusionTexCoord: 0
+              emissiveTexCoord: 0
+              normalTexCoord: 0
+              name: ""
+            textureRect: [0, 0, 1, 1]
+            primitiveType: triangles
+            vertexCount: 6
+            faceCulling: true
+            textureShadow: false
+            overrideFields: 2690
+            hasTexCoord1: true
+            hasTexCoord2: false
+            hasNormalMap: true
+            hasTangent: false
+            hasVertexColor3: false
+            hasVertexColor4: true
+            hasTextureRect: false
+            hasSkinning: false
+            hasMorphTarget: false
+            hasMorphNormal: false
+            hasMorphTangent: false
+        bonesMatrix:
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        normAdjustJoint: 1
+        normAdjustWeight: 1
+        aabb:
+          min: [-50, 0, -50]
+          max: [50, 0, 50]
+        verticesAABB:
+          min: [-50, 0, -50]
+          max: [50, 0, 50]
+        worldAABB:
+          min: [-250, 1.6, -250]
+          max: [250, 1.6, 250]
+        receiveLights: true
+        receiveIBL: false
+        castShadows: false
+        receiveShadows: true
+        lodEnabled: true
+        lodBias: 1
+        renderInReflectionProbes: true
+        shadowsBillboard: true
+        transparent: false
+        cullingMode: back
+        windingOrder: ccw

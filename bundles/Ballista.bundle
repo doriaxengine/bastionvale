@@ -1,0 +1,1230 @@
+type: EntityBundle
+members:
+  - type: Entity
+    entity: 1001
+    name: Ballista
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [-4, 3, 3]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 3, 3, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 3, 3, 1]]
+        normalMatrix: [[1, 0, 0, 4], [0, 1, 0, -3], [0, 0, 1, -3], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      script:
+        scripts:
+          - type: lua
+            path: scripts/Tower.lua
+            className: Tower
+            enabled: true
+            properties:
+              - name: damage
+                displayName: Damage
+                type: Float
+                value: 13
+                defaultValue: 12
+              - name: range
+                displayName: Range
+                type: Float
+                value: 15
+                defaultValue: 14
+              - name: reload
+                displayName: Reload
+                type: Float
+                value: 0.85
+                defaultValue: 1
+              - name: shotSpeed
+                displayName: Shot Speed
+                type: Float
+                value: 46
+                defaultValue: 40
+              - name: arc
+                displayName: Shot Arc
+                type: Float
+                value: 0
+                defaultValue: 0
+              - name: splash
+                displayName: Splash Radius
+                type: Float
+                value: 0
+                defaultValue: 0
+              - name: slow
+                displayName: Slow
+                type: Float
+                value: 0
+                defaultValue: 0
+              - name: slowTime
+                displayName: Slow Time
+                type: Float
+                value: 0
+                defaultValue: 0
+              - name: storyHeight
+                displayName: Story Height
+                type: Float
+                value: 2.4
+                defaultValue: 2.4
+              - name: middle
+                displayName: Middle
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1004
+                defaultValue: 0
+              - name: upper
+                displayName: Upper
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1003
+                defaultValue: 0
+              - name: top
+                displayName: Top
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1007
+                defaultValue: 0
+              - name: head
+                displayName: Head
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1009
+                defaultValue: 0
+              - name: shot
+                displayName: Shot
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1002
+                defaultValue: 0
+              - name: muzzle
+                displayName: Muzzle
+                type: EntityReference
+                ptrTypeName: Particles
+                value: 1016
+                defaultValue: 0
+              - name: impact
+                displayName: Impact
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1014
+                defaultValue: 0
+              - name: impactParticles
+                displayName: Impact Particles
+                type: EntityReference
+                ptrTypeName: Particles
+                value: 1017
+                defaultValue: 0
+              - name: fireSound
+                displayName: Fire Sound
+                type: EntityReference
+                ptrTypeName: Sound
+                value: 1015
+                defaultValue: 0
+    children:
+      - type: Entity
+        entity: 1002
+        name: Shot
+        components:
+          transform:
+            position: [0, 4, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [-4, 7, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 4, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 7, 3, 1]]
+            normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -1.75], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+            visible: false
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/weapon-ammo-arrow.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 216
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.08, -0.08, -0.3888]
+              max: [0.08, 0.08, 0.3888]
+            verticesAABB:
+              min: [-0.08, -0.08, -0.3888]
+              max: [0.08, 0.08, 0.3888]
+            worldAABB:
+              min: [-4.32, 6.68, 1.4448]
+              max: [-3.68, 7.32, 4.5552]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: false
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/weapon-ammo-arrow.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1003
+        name: Upper
+        components:
+          transform:
+            position: [0, 5.64, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [-4, 8.639999, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 5.64, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 8.639999, 3, 1]]
+            normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -2.1599998], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+            visible: false
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/tower-round-middle-b.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1836
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5643749, 0, -0.5643749]
+              max: [0.5643749, 0.6, 0.6788629]
+            verticesAABB:
+              min: [-0.5643749, 0, -0.5643749]
+              max: [0.5643749, 0.6, 0.6788629]
+            worldAABB:
+              min: [-6.2574997, 8.639999, 0.7425003]
+              max: [-1.7425003, 11.039999, 5.7154517]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/tower-round-middle-b.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1004
+        name: Middle
+        components:
+          transform:
+            position: [0, 3.24, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [-4, 6.24, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 3.24, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 6.24, 3, 1]]
+            normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -1.56], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+            visible: false
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/tower-round-middle-a.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1884
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5538986, 0, -0.5538986]
+              max: [0.5538986, 0.6, 0.5538986]
+            verticesAABB:
+              min: [-0.5538986, 0, -0.5538986]
+              max: [0.5538986, 0.6, 0.5538986]
+            worldAABB:
+              min: [-6.2155943, 6.24, 0.7844057]
+              max: [-1.7844057, 8.639999, 5.2155943]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/tower-round-middle-a.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1005
+        name: Bottom
+        components:
+          transform:
+            position: [0, 0.84, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [-4, 3.84, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 0.84, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 3.84, 3, 1]]
+            normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -0.96], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/tower-round-bottom-a.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1104
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.6, 0.5]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.6, 0.5]
+            worldAABB:
+              min: [-6, 3.84, 1]
+              max: [-2, 6.24, 5]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/tower-round-bottom-a.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1006
+        name: Base
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [-4, 3, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 0, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 3, 3, 1]]
+            normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -0.75], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/td/tower-round-base.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1224
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.21, 0.5]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.21, 0.5]
+            worldAABB:
+              min: [-6, 3, 1]
+              max: [-2, 3.84, 5]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/tower-round-base.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1007
+        name: Top
+        components:
+          transform:
+            position: [0, 3.24, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-4, 6.24, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 3.24, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 6.24, 3, 1]]
+            normalMatrix: [[1, 0, 0, 4], [0, 1, 0, -6.24], [0, 0, 1, -3], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+        children:
+          - type: Entity
+            entity: 1008
+            name: Ring
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                worldPosition: [-4, 6.24, 3]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [4, 4, 4]
+                localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 0, 0, 1]]
+                modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 6.24, 3, 1]]
+                normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -1.56], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/tower-round-top-a.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 1416
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.46, 0, -0.46]
+                  max: [0.46, 0.5, 0.46]
+                verticesAABB:
+                  min: [-0.46, 0, -0.46]
+                  max: [0.46, 0.5, 0.46]
+                worldAABB:
+                  min: [-5.84, 6.24, 1.16]
+                  max: [-2.1599998, 8.24, 4.84]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+              model:
+                filename: models/td/tower-round-top-a.glb
+                skeleton: 0
+          - type: Entity
+            entity: 1009
+            name: Head
+            components:
+              transform:
+                position: [0, 1.2, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [-4, 7.4399996, 3]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [1, 1, 1]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1.2, 0, 1]]
+                modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 7.4399996, 3, 1]]
+                normalMatrix: [[1, 0, 0, 4], [0, 1, 0, -7.4399996], [0, 0, 1, -3], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+            children:
+              - type: Entity
+                entity: 1010
+                name: Weapon
+                components:
+                  transform:
+                    position: [0, 0, 0]
+                    rotation: [1, 0, 0, 0]
+                    scale: [4, 4, 4]
+                    worldPosition: [-4, 7.4399996, 3]
+                    worldRotation: [1, 0, 0, 0]
+                    worldScale: [4, 4, 4]
+                    localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 0, 0, 1]]
+                    modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 7.4399996, 3, 1]]
+                    normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -1.8599999], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+                    visible: true
+                    billboardRotation: [1, 0, 0, 0]
+                    billboard: false
+                    fakeBillboard: false
+                    cylindricalBillboard: false
+                  mesh:
+                    submeshes: ~
+                    normAdjustJoint: 1
+                    normAdjustWeight: 1
+                    aabb:
+                      min: [0, 0, 0]
+                      max: [0, 0, 0]
+                    verticesAABB:
+                      min: [0, 0, 0]
+                      max: [0, 0, 0]
+                    worldAABB:
+                      min: [-4, 7.4399996, 3]
+                      max: [-4, 7.4399996, 3]
+                    receiveLights: true
+                    receiveIBL: false
+                    castShadows: true
+                    receiveShadows: true
+                    lodEnabled: true
+                    lodBias: 1
+                    renderInReflectionProbes: true
+                    shadowsBillboard: true
+                    transparent: false
+                    cullingMode: back
+                    windingOrder: ccw
+                  model:
+                    filename: models/td/weapon-ballista.glb
+                    skeleton: 0
+                    meshNodesMapping:
+                      - node: 0
+                        entity: 1011
+                      - node: 1
+                        entity: 1012
+                children:
+                  - type: Entity
+                    entity: 1011
+                    name: weapon-ballista
+                    components:
+                      transform:
+                        position: [0, 0, 0]
+                        rotation: [1, 0, 0, 0]
+                        scale: [1, 1, 1]
+                        worldPosition: [-4, 7.4399996, 3]
+                        worldRotation: [1, 0, 0, 0]
+                        worldScale: [4, 4, 4]
+                        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                        modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 7.4399996, 3, 1]]
+                        normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -1.8599999], [0, 0, 0.25, -0.75], [0, 0, 0, 1]]
+                        visible: true
+                        billboardRotation: [1, 0, 0, 0]
+                        billboard: false
+                        fakeBillboard: false
+                        cylindricalBillboard: false
+                      mesh:
+                        submeshes:
+                          - material:
+                              baseColorFactor: [1, 1, 1, 1]
+                              metallicFactor: 0
+                              roughnessFactor: 1
+                              alphaCutoff: 0.5
+                              foliageTransmission: 0
+                              alphaMode: ALPHA_OPAQUE
+                              emissiveFactor: [0, 0, 0]
+                              baseColorTexture:
+                                textureType: 2D
+                                source: id
+                                id: models/td/weapon-ballista.glb|gltf-image|0|s0
+                                minFilter: nearest_mipmap_nearest
+                                magFilter: nearest
+                                wrapU: repeat
+                                wrapV: repeat
+                                releaseDataAfterLoad: true
+                              baseColorTexCoord: 0
+                              metallicRoughnessTexCoord: 0
+                              occlusionTexCoord: 0
+                              emissiveTexCoord: 0
+                              normalTexCoord: 0
+                              name: ""
+                            textureRect: [0, 0, 1, 1]
+                            primitiveType: triangles
+                            vertexCount: 1188
+                            faceCulling: false
+                            textureShadow: false
+                            hasTexCoord1: true
+                            hasTexCoord2: false
+                            hasNormalMap: false
+                            hasTangent: true
+                            hasVertexColor3: false
+                            hasVertexColor4: false
+                            hasTextureRect: false
+                            hasSkinning: false
+                            hasMorphTarget: false
+                            hasMorphNormal: false
+                            hasMorphTangent: false
+                        normAdjustJoint: 1
+                        normAdjustWeight: 1
+                        aabb:
+                          min: [-0.3, 0, -0.3]
+                          max: [0.3, 0.43977773, 0.3]
+                        verticesAABB:
+                          min: [-0.3, 0, -0.3]
+                          max: [0.3, 0.43977773, 0.3]
+                        worldAABB:
+                          min: [-5.2, 7.4399996, 1.8]
+                          max: [-2.8, 9.19911, 4.2]
+                        receiveLights: true
+                        receiveIBL: false
+                        castShadows: true
+                        receiveShadows: true
+                        lodEnabled: true
+                        lodBias: 1
+                        renderInReflectionProbes: true
+                        shadowsBillboard: true
+                        transparent: false
+                        cullingMode: back
+                        windingOrder: ccw
+                  - type: Entity
+                    entity: 1012
+                    name: arrow
+                    components:
+                      transform:
+                        position: [1.4438228e-15, 0.41000003, -0.0112]
+                        rotation: [1, 0, 0, 0]
+                        scale: [1, 1, 1]
+                        worldPosition: [-4, 9.08, 2.9552]
+                        worldRotation: [1, 0, 0, 0]
+                        worldScale: [4, 4, 4]
+                        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [1.4438228e-15, 0.41000003, -0.0112, 1]]
+                        modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [-4, 9.08, 2.9552, 1]]
+                        normalMatrix: [[0.25, 0, 0, 1], [0, 0.25, 0, -2.27], [0, 0, 0.25, -0.7388], [0, 0, 0, 1]]
+                        visible: true
+                        billboardRotation: [1, 0, 0, 0]
+                        billboard: false
+                        fakeBillboard: false
+                        cylindricalBillboard: false
+                      mesh:
+                        submeshes:
+                          - material:
+                              baseColorFactor: [1, 1, 1, 1]
+                              metallicFactor: 0
+                              roughnessFactor: 1
+                              alphaCutoff: 0.5
+                              foliageTransmission: 0
+                              alphaMode: ALPHA_OPAQUE
+                              emissiveFactor: [0, 0, 0]
+                              baseColorTexture:
+                                textureType: 2D
+                                source: id
+                                id: models/td/weapon-ballista.glb|gltf-image|0|s0
+                                minFilter: nearest_mipmap_nearest
+                                magFilter: nearest
+                                wrapU: repeat
+                                wrapV: repeat
+                                releaseDataAfterLoad: true
+                              baseColorTexCoord: 0
+                              metallicRoughnessTexCoord: 0
+                              occlusionTexCoord: 0
+                              emissiveTexCoord: 0
+                              normalTexCoord: 0
+                              name: ""
+                            textureRect: [0, 0, 1, 1]
+                            primitiveType: triangles
+                            vertexCount: 672
+                            faceCulling: false
+                            textureShadow: false
+                            hasTexCoord1: true
+                            hasTexCoord2: false
+                            hasNormalMap: false
+                            hasTangent: true
+                            hasVertexColor3: false
+                            hasVertexColor4: false
+                            hasTextureRect: false
+                            hasSkinning: false
+                            hasMorphTarget: false
+                            hasMorphNormal: false
+                            hasMorphTangent: false
+                        normAdjustJoint: 1
+                        normAdjustWeight: 1
+                        aabb:
+                          min: [-0.3313279, -0.089999996, -0.2888001]
+                          max: [0.3313279, 0.09, 0.4887999]
+                        verticesAABB:
+                          min: [-0.3313279, -0.089999996, -0.2888001]
+                          max: [0.3313279, 0.09, 0.4887999]
+                        worldAABB:
+                          min: [-5.3253117, 8.72, 1.7999996]
+                          max: [-2.6746883, 9.44, 4.9103994]
+                        receiveLights: true
+                        receiveIBL: false
+                        castShadows: true
+                        receiveShadows: true
+                        lodEnabled: true
+                        lodBias: 1
+                        renderInReflectionProbes: true
+                        shadowsBillboard: true
+                        transparent: false
+                        cullingMode: back
+                        windingOrder: ccw
+              - type: Entity
+                entity: 1013
+                name: Muzzle
+                components:
+                  transform:
+                    position: [0, 1.2, 1.7]
+                    rotation: [1, 0, 0, 0]
+                    scale: [1, 1, 1]
+                    worldPosition: [-4, 8.639999, 4.7]
+                    worldRotation: [1, 0, 0, 0]
+                    worldScale: [1, 1, 1]
+                    localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1.2, 1.7, 1]]
+                    modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 8.639999, 4.7, 1]]
+                    normalMatrix: [[1, 0, 0, 4], [0, 1, 0, -8.639999], [0, 0, 1, -4.7], [0, 0, 0, 1]]
+                    visible: true
+                    billboardRotation: [1, 0, 0, 0]
+                    billboard: false
+                    fakeBillboard: false
+                    cylindricalBillboard: false
+                  points:
+                    maxPoints: 20
+                    transparent: true
+                    autoTransparency: true
+                    texture:
+                      textureType: 2D
+                      source: path
+                      path: particles/muzzle_01.png
+                      minFilter: linear
+                      magFilter: linear
+                      wrapU: repeat
+                      wrapV: repeat
+                      releaseDataAfterLoad: true
+                    points: ~
+      - type: Entity
+        entity: 1014
+        name: Impact
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-4, 3, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 3, 3, 1]]
+            normalMatrix: [[1, 0, 0, 4], [0, 1, 0, -3], [0, 0, 1, -3], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          points:
+            maxPoints: 40
+            transparent: true
+            autoTransparency: true
+            texture:
+              textureType: 2D
+              source: path
+              path: particles/spark_05.png
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            points: ~
+      - type: Entity
+        entity: 1015
+        name: Fire Sound
+        components:
+          transform:
+            position: [0, 4, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [-4, 7, 3]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 4, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-4, 7, 3, 1]]
+            normalMatrix: [[1, 0, 0, 4], [0, 1, 0, -7], [0, 0, 1, -3], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          sound:
+            state: stopped
+            filename: audio/shoot_arrow.ogg
+            enableClocked: false
+            volume: 0.3
+            speed: 1
+            pan: 0
+            looping: false
+            loopingPoint: 0
+            protectVoice: false
+            inaudibleBehaviorMustTick: false
+            inaudibleBehaviorKill: false
+            minDistance: 1
+            maxDistance: 1000
+            attenuationModel: no_attenuation
+            attenuationRolloffFactor: 1
+            dopplerFactor: 1
+  - type: Entity
+    entity: 1016
+    name: Muzzle Burst
+    components:
+      action:
+        state: Stopped
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1013
+        ownedTarget: false
+      particles:
+        maxParticles: 20
+        emitter: true
+        loop: false
+        localSpace: false
+        rate: 0
+        maxPerUpdate: 100
+        bursts:
+          - time: 0
+            minCount: 8
+            maxCount: 12
+        lifeInitializer:
+          minLife: 0.1
+          maxLife: 0.25
+        positionInitializer:
+          shape: Sphere
+          minPosition: [0, 0, 0]
+          maxPosition: [0, 0, 0]
+          radius: 0.3
+          innerRadius: 0
+          coneAngle: 30
+          coneHeight: 1
+        positionModifier:
+          fromTime: 0
+          toTime: 0
+          fromPosition: [0, 0, 0]
+          toPosition: [0, 0, 0]
+          function: LINEAR
+        velocityInitializer:
+          minVelocity: [-1, 0, -1]
+          maxVelocity: [1, 2, 1]
+        velocityModifier:
+          fromTime: 0
+          toTime: 0
+          fromVelocity: [0, 0, 0]
+          toVelocity: [0, 0, 0]
+          function: LINEAR
+        accelerationInitializer:
+          minAcceleration: [0, 0, 0]
+          maxAcceleration: [0, 0, 0]
+        accelerationModifier:
+          fromTime: 0
+          toTime: 0
+          fromAcceleration: [0, 0, 0]
+          toAcceleration: [0, 0, 0]
+          function: LINEAR
+        colorInitializer:
+          minColor: [1, 0.75, 0.35]
+          maxColor: [1, 0.95, 0.6]
+          useSRGB: true
+        colorModifier:
+          fromTime: 0
+          toTime: 0
+          fromColor: [0, 0, 0]
+          toColor: [0, 0, 0]
+          function: LINEAR
+          useSRGB: true
+        colorGradient:
+          useSRGB: true
+          stops: ~
+        alphaInitializer:
+          minAlpha: 1
+          maxAlpha: 1
+        alphaModifier:
+          fromTime: 0.04
+          toTime: 0.25
+          fromAlpha: 1
+          toAlpha: 0
+          function: LINEAR
+        sizeInitializer:
+          minSize: 1.2
+          maxSize: 2
+        sizeModifier:
+          fromTime: 0
+          toTime: 0.25
+          fromSize: 2
+          toSize: 0.4
+          function: LINEAR
+        spriteInitializer:
+          frames: ~
+        spriteModifier:
+          fromTime: 0
+          toTime: 0
+          function: LINEAR
+          frames: ~
+        rotationInitializer:
+          minRotation: [1, 0, 0, 0]
+          maxRotation: [1, 0, 0, 0]
+          shortestPath: false
+        rotationModifier:
+          fromTime: 0
+          toTime: 0
+          fromRotation: [1, 0, 0, 0]
+          toRotation: [1, 0, 0, 0]
+          function: LINEAR
+          shortestPath: false
+        scaleInitializer:
+          minScale: [1, 1, 1]
+          maxScale: [1, 1, 1]
+          linearSort: true
+        scaleModifier:
+          fromTime: 0
+          toTime: 0
+          fromScale: [1, 1, 1]
+          toScale: [1, 1, 1]
+          function: LINEAR
+  - type: Entity
+    entity: 1017
+    name: Impact Burst
+    components:
+      action:
+        state: Stopped
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1014
+        ownedTarget: false
+      particles:
+        maxParticles: 40
+        emitter: true
+        loop: false
+        localSpace: false
+        rate: 0
+        maxPerUpdate: 100
+        bursts:
+          - time: 0
+            minCount: 10
+            maxCount: 14
+        lifeInitializer:
+          minLife: 0.2
+          maxLife: 0.45
+        positionInitializer:
+          shape: Sphere
+          minPosition: [0, 0, 0]
+          maxPosition: [0, 0, 0]
+          radius: 0.6
+          innerRadius: 0
+          coneAngle: 30
+          coneHeight: 1
+        positionModifier:
+          fromTime: 0
+          toTime: 0
+          fromPosition: [0, 0, 0]
+          toPosition: [0, 0, 0]
+          function: LINEAR
+        velocityInitializer:
+          minVelocity: [-5, 1, -5]
+          maxVelocity: [5, 7, 5]
+        velocityModifier:
+          fromTime: 0
+          toTime: 0
+          fromVelocity: [0, 0, 0]
+          toVelocity: [0, 0, 0]
+          function: LINEAR
+        accelerationInitializer:
+          minAcceleration: [0, -14, 0]
+          maxAcceleration: [0, -9, 0]
+        accelerationModifier:
+          fromTime: 0
+          toTime: 0
+          fromAcceleration: [0, 0, 0]
+          toAcceleration: [0, 0, 0]
+          function: LINEAR
+        colorInitializer:
+          minColor: [1, 0.85, 0.45]
+          maxColor: [1, 1, 0.85]
+          useSRGB: true
+        colorModifier:
+          fromTime: 0
+          toTime: 0
+          fromColor: [0, 0, 0]
+          toColor: [0, 0, 0]
+          function: LINEAR
+          useSRGB: true
+        colorGradient:
+          useSRGB: true
+          stops: ~
+        alphaInitializer:
+          minAlpha: 1
+          maxAlpha: 1
+        alphaModifier:
+          fromTime: 0.08
+          toTime: 0.45
+          fromAlpha: 1
+          toAlpha: 0
+          function: LINEAR
+        sizeInitializer:
+          minSize: 0.35
+          maxSize: 0.7
+        sizeModifier:
+          fromTime: 0
+          toTime: 0.45
+          fromSize: 0.7
+          toSize: 0.07
+          function: LINEAR
+        spriteInitializer:
+          frames: ~
+        spriteModifier:
+          fromTime: 0
+          toTime: 0
+          function: LINEAR
+          frames: ~
+        rotationInitializer:
+          minRotation: [1, 0, 0, 0]
+          maxRotation: [1, 0, 0, 0]
+          shortestPath: false
+        rotationModifier:
+          fromTime: 0
+          toTime: 0
+          fromRotation: [1, 0, 0, 0]
+          toRotation: [1, 0, 0, 0]
+          function: LINEAR
+          shortestPath: false
+        scaleInitializer:
+          minScale: [1, 1, 1]
+          maxScale: [1, 1, 1]
+          linearSort: true
+        scaleModifier:
+          fromTime: 0
+          toTime: 0
+          fromScale: [1, 1, 1]
+          toScale: [1, 1, 1]
+          function: LINEAR

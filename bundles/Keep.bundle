@@ -1,0 +1,1731 @@
+type: EntityBundle
+members:
+  - type: Entity
+    entity: 1001
+    name: Keep
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [54, 0, 6]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+        normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+    children:
+      - type: Entity
+        entity: 1002
+        name: tower-square-base
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [54, 0, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+            normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tower-square-base.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 84
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-10.000002, 3, -10.000002]
+              max: [10.000002, 7.04, 10.000002]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 1.01, 0.5]
+            worldAABB:
+              min: [44, 3, -4.000002]
+              max: [64, 7.04, 16.000002]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tower-square-base.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 5
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-8, 3, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 3, -8]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 3, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 3, 8]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [0, 3, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1003
+        name: tower-square-mid-windows
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [54, 0, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+            normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tower-square-mid-windows.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1092
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-9.8600025, 7.04, -9.8600025]
+              max: [9.8600025, 15.12, 9.8600025]
+            verticesAABB:
+              min: [-0.465, 0, -0.465]
+              max: [0.465, 1.01, 0.465]
+            worldAABB:
+              min: [44.14, 7.04, -3.8600025]
+              max: [63.86, 15.12, 15.8600025]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tower-square-mid-windows.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 5
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-8, 7.04, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 7.04, -8]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 7.04, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 7.04, 8]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [0, 11.08, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1004
+        name: tower-square-top
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [54, 0, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+            normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tower-square-top.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 444
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-10.000002, 11.08, -10.000002]
+              max: [10.000002, 16.32, 10.000002]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 0.3, 0.5]
+            worldAABB:
+              min: [44, 11.08, -4.000002]
+              max: [64, 16.32, 16.000002]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tower-square-top.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 5
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-8, 11.08, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 11.08, -8]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 11.08, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 11.08, 8]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [0, 15.12, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1005
+        name: tower-square-top-roof
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [54, 0, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+            normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tower-square-top-roof.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 348
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-10.000002, 12.28, -10.000002]
+              max: [10.000002, 16.279999, 10.000002]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 1, 0.5]
+            worldAABB:
+              min: [44, 12.28, -4.000002]
+              max: [64, 16.279999, 16.000002]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tower-square-top-roof.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 4
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-8, 12.28, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 12.28, -8]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 12.28, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 12.28, 8]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1006
+        name: wall
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [54, 0, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+            normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/wall.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 534
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-10.000002, 3, -10]
+              max: [10.000002, 8.24, 10]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 1.31, 0.5]
+            worldAABB:
+              min: [44, 3, -4]
+              max: [64, 8.24, 16]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/wall.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 11
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-4, 3, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-4, 3, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 3, -4]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 3, -4]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [0, 3, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [0, 3, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 3, 0]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [4, 3, -8]
+                rotation: [1, 0, 0, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [4, 3, 8]
+                rotation: [0, 0, 1, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [8, 3, 4]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 3, 4]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1007
+        name: wall-doorway
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [54, 0, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [54, 0, 6, 1]]
+            normalMatrix: [[1, 0, 0, -54], [0, 1, 0, 0], [0, 0, 1, -6], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/wall-doorway.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 1500
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-10.000001, 3, -2.0000024]
+              max: [-5.9999976, 8.24, 2.0000024]
+            verticesAABB:
+              min: [-0.5, -4.5153407e-17, -0.5]
+              max: [5.197762e-14, 1.31, 0.5]
+            worldAABB:
+              min: [44, 3, 3.9999976]
+              max: [48.000004, 8.24, 8.000002]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/wall-doorway.glb
+            mergeStaticMeshes: true
+            skeleton: 0
+          instancedmesh:
+            maxInstances: 2
+            cullInstances: true
+            distanceFade: false
+            cullDistance: 0
+            fadeStart: 0
+            fadeEnd: 0
+            instancedBillboard: false
+            instancedCylindricalBillboard: false
+            instances:
+              - position: [-8, 3, 0]
+                rotation: [-0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+              - position: [-8, 3, 0]
+                rotation: [0.707107, 0, 0.707107, 0]
+                scale: [4, 4, 4]
+                color: [1, 1, 1, 1]
+                textureRect: [0, 0, 1, 1]
+                visible: true
+      - type: Entity
+        entity: 1008
+        name: tower-square-mid
+        components:
+          transform:
+            position: [0, 7.04, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [54, 7.04, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 7.04, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [54, 7.04, 6, 1]]
+            normalMatrix: [[0.25, 0, 0, -13.5], [0, 0.25, 0, -1.76], [0, 0, 0.25, -1.5], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tower-square-mid.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 228
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.465, 0, -0.465]
+              max: [0.465, 1.01, 0.465]
+            verticesAABB:
+              min: [-0.465, 0, -0.465]
+              max: [0.465, 1.01, 0.465]
+            worldAABB:
+              min: [52.14, 7.04, 4.14]
+              max: [55.86, 11.08, 7.86]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tower-square-mid.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1009
+        name: tower-square-roof
+        components:
+          transform:
+            position: [0, 16.32, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4, 4, 4]
+            worldPosition: [54, 16.32, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [0, 16.32, 0, 1]]
+            modelMatrix: [[4, 0, 0, 0], [0, 4, 0, 0], [0, 0, 4, 0], [54, 16.32, 6, 1]]
+            normalMatrix: [[0.25, 0, 0, -13.5], [0, 0.25, 0, -4.08], [0, 0, 0.25, -1.5], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tower-square-roof.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 432
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 2.01, 0.5]
+            verticesAABB:
+              min: [-0.5, 0, -0.5]
+              max: [0.5, 2.01, 0.5]
+            worldAABB:
+              min: [52, 16.32, 4]
+              max: [56, 24.36, 8]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tower-square-roof.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1010
+        name: flag-banner-long
+        components:
+          transform:
+            position: [0, 17.56, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [3.6, 3.6, 3.6]
+            worldPosition: [54, 17.56, 6]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [3.6, 3.6, 3.6]
+            localMatrix: [[3.6, 0, 0, 0], [0, 3.6, 0, 0], [0, 0, 3.6, 0], [0, 17.56, 0, 1]]
+            modelMatrix: [[3.6, 0, 0, 0], [0, 3.6, 0, 0], [0, 0, 3.6, 0], [54, 17.56, 6, 1]]
+            normalMatrix: [[0.2777778, 0, 0, -15.000001], [0, 0.2777778, 0, -4.8777776], [0, 0, 0.2777778, -1.6666667], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/flag-banner-long.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 204
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0, 0, -0.315]
+              max: [0.04, 2.1699998, 0.315]
+            verticesAABB:
+              min: [-0, 0, -0.315]
+              max: [0.04, 2.1699998, 0.315]
+            worldAABB:
+              min: [54, 17.56, 4.866]
+              max: [54.144, 25.371998, 7.134]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/flag-banner-long.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1011
+        name: stairs-stone
+        components:
+          transform:
+            position: [-4, 3, -4]
+            rotation: [0.707107, 0, 0.707107, 0]
+            scale: [4, 4, 4]
+            worldPosition: [50, 3, 2]
+            worldRotation: [0.707107, 0, 0.707107, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[-2.3841858e-06, 0, -4.0000024, 0], [0, 4, 0, 0], [4.0000024, 0, -2.3841858e-06, 0], [-4, 3, -4, 1]]
+            modelMatrix: [[-2.3841858e-06, 0, -4.0000024, 0], [0, 4, 0, 0], [4.0000024, 0, -2.3841858e-06, 0], [50, 3, 2, 1]]
+            normalMatrix: [[-1.4901144e-07, 0, -0.24999985, 0.50000715], [0, 0.25, 0, -0.75000006], [0.24999985, 0, -1.4901144e-07, -12.499992], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/stairs-stone.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 312
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.11625, 0, -0.4095]
+              max: [0.11625, 0.67499995, 0.4095]
+            verticesAABB:
+              min: [-0.11625, 0, -0.4095]
+              max: [0.11625, 0.67499995, 0.4095]
+            worldAABB:
+              min: [48.362, 3, 1.5349988]
+              max: [51.638, 5.7, 2.4650013]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/stairs-stone.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1012
+        name: rocks-small
+        components:
+          transform:
+            position: [4, 3, -4]
+            rotation: [0.953717, 0, 0.300706, 0]
+            scale: [4, 4, 4]
+            worldPosition: [58, 3, 2]
+            worldRotation: [0.953717, 0, 0.300706, 0]
+            worldScale: [4, 4, 4]
+            localMatrix: [[3.2766073, 0, -2.2943075, 0], [0, 4, 0, 0], [2.2943075, 0, 3.2766073, 0], [4, 3, -4, 1]]
+            modelMatrix: [[3.2766073, 0, -2.2943075, 0], [0, 4, 0, 0], [2.2943075, 0, 3.2766073, 0], [58, 3, 2, 1]]
+            normalMatrix: [[0.20478792, 0, -0.1433942, -11.590913], [0, 0.25, 0, -0.75], [0.1433942, 0, 0.20478792, -8.726439], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/rocks-small.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 420
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.5150211, 0, -0.5526544]
+              max: [0.5150211, 0.5, 0.5526543]
+            verticesAABB:
+              min: [-0.5150211, 0, -0.5526544]
+              max: [0.5150211, 0.5, 0.5526543]
+            worldAABB:
+              min: [55.044518, 3, -0.99244833]
+              max: [60.955482, 5, 4.992448]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/rocks-small.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1013
+        name: tree-large
+        components:
+          transform:
+            position: [-4, 3, 4]
+            rotation: [0.991445, 0, 0.130526, 0]
+            scale: [3.2, 3.2, 3.2]
+            worldPosition: [50, 3, 10]
+            worldRotation: [0.991445, 0, 0.130526, 0]
+            worldScale: [3.2, 3.2, 3.2]
+            localMatrix: [[3.0909631, 0, -0.8282199, 0], [0, 3.2, 0, 0], [0.8282199, 0, 3.0909631, 0], [-4, 3, 4, 1]]
+            modelMatrix: [[3.0909631, 0, -0.8282199, 0], [0, 3.2, 0, 0], [0.8282199, 0, 3.0909631, 0], [50, 3, 10, 1]]
+            normalMatrix: [[0.3018518, 0, -0.080880836, -14.283783], [0, 0.3125, 0, -0.93749994], [0.080880836, 0, 0.3018518, -7.0625596], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tree-large.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 687
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.44433272, 0, -0.44489095]
+              max: [0.44433272, 1.8492, 0.44489095]
+            verticesAABB:
+              min: [-0.44433272, 0, -0.44489095]
+              max: [0.44433272, 1.8492, 0.44489095]
+            worldAABB:
+              min: [48.258118, 3, 8.256853]
+              max: [51.741882, 8.91744, 11.743147]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tree-large.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1014
+        name: tree-small
+        components:
+          transform:
+            position: [4, 3, 4]
+            rotation: [0.939693, 0, -0.34202, 0]
+            scale: [3.6, 3.6, 3.6]
+            worldPosition: [58, 3, 10]
+            worldRotation: [0.939693, 0, -0.34202, 0]
+            worldScale: [3.6, 3.6, 3.6]
+            localMatrix: [[2.7577605, 0, 2.3140352, 0], [0, 3.6, 0, 0], [-2.3140352, 0, 2.7577605, 0], [4, 3, 4, 1]]
+            modelMatrix: [[2.7577605, 0, 2.3140352, 0], [0, 3.6, 0, 0], [-2.3140352, 0, 2.7577605, 0], [58, 3, 10, 1]]
+            normalMatrix: [[0.21279012, 0, 0.17855206, -14.127347], [0, 0.27777776, 0, -0.8333333], [-0.17855206, 0, 0.21279012, 8.228119], [0, 0, 0, 0.99999994]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes:
+              - material:
+                  baseColorFactor: [1, 1, 1, 1]
+                  metallicFactor: 0
+                  roughnessFactor: 1
+                  alphaCutoff: 0.5
+                  foliageTransmission: 0
+                  alphaMode: ALPHA_OPAQUE
+                  emissiveFactor: [0, 0, 0]
+                  baseColorTexture:
+                    textureType: 2D
+                    source: id
+                    id: models/castle/tree-small.glb|gltf-image|0|s0
+                    minFilter: nearest_mipmap_nearest
+                    magFilter: nearest
+                    wrapU: repeat
+                    wrapV: repeat
+                    releaseDataAfterLoad: true
+                  baseColorTexCoord: 0
+                  metallicRoughnessTexCoord: 0
+                  occlusionTexCoord: 0
+                  emissiveTexCoord: 0
+                  normalTexCoord: 0
+                  name: ""
+                textureRect: [0, 0, 1, 1]
+                primitiveType: triangles
+                vertexCount: 492
+                faceCulling: false
+                textureShadow: false
+                hasTexCoord1: true
+                hasTexCoord2: false
+                hasNormalMap: false
+                hasTangent: true
+                hasVertexColor3: false
+                hasVertexColor4: false
+                hasTextureRect: false
+                hasSkinning: false
+                hasMorphTarget: false
+                hasMorphNormal: false
+                hasMorphTangent: false
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [-0.3690275, 0, -0.36]
+              max: [0.3690275, 1.3492, 0.36]
+            verticesAABB:
+              min: [-0.3690275, 0, -0.36]
+              max: [0.3690275, 1.3492, 0.36]
+            worldAABB:
+              min: [56.149258, 3, 8.153263]
+              max: [59.850742, 7.85712, 11.846737]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/castle/tree-small.glb
+            skeleton: 0
+      - type: Entity
+        entity: 1015
+        name: Gate Torch
+        components:
+          transform:
+            position: [-8, 7.454, -2.88]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [46, 7.454, 3.12]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-8, 7.454, -2.88, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 7.454, 3.12, 1]]
+            normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -7.454], [0, 0, 1, -3.12], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+        children:
+          - type: Entity
+            entity: 1016
+            name: Points
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [46, 7.454, 3.12]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [1, 1, 1]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 7.454, 3.12, 1]]
+                normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -7.454], [0, 0, 1, -3.12], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              points:
+                maxPoints: 40
+                transparent: true
+                autoTransparency: true
+                texture:
+                  textureType: 2D
+                  source: path
+                  path: particles/flame_06.png
+                  minFilter: linear
+                  magFilter: linear
+                  wrapU: clamp_to_edge
+                  wrapV: clamp_to_edge
+                  releaseDataAfterLoad: true
+                points: ~
+      - type: Entity
+        entity: 1017
+        name: Gate Torch
+        components:
+          transform:
+            position: [-8, 7.454, 2.88]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [46, 7.454, 8.88]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [-8, 7.454, 2.88, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 7.454, 8.88, 1]]
+            normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -7.454], [0, 0, 1, -8.88], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+        children:
+          - type: Entity
+            entity: 1018
+            name: Points
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [46, 7.454, 8.88]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [1, 1, 1]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [46, 7.454, 8.88, 1]]
+                normalMatrix: [[1, 0, 0, -46], [0, 1, 0, -7.454], [0, 0, 1, -8.88], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              points:
+                maxPoints: 40
+                transparent: true
+                autoTransparency: true
+                texture:
+                  textureType: 2D
+                  source: path
+                  path: particles/flame_06.png
+                  minFilter: linear
+                  magFilter: linear
+                  wrapU: clamp_to_edge
+                  wrapV: clamp_to_edge
+                  releaseDataAfterLoad: true
+                points: ~
+  - type: Entity
+    entity: 1019
+    name: Emitter
+    components:
+      action:
+        state: Stopped
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1018
+        ownedTarget: false
+      particles:
+        maxParticles: 40
+        emitter: true
+        loop: true
+        localSpace: false
+        rate: 22
+        maxPerUpdate: 64
+        bursts: ~
+        lifeInitializer:
+          minLife: 0.5
+          maxLife: 0.9
+        positionInitializer:
+          shape: Sphere
+          minPosition: [0, 0, 0]
+          maxPosition: [0, 0, 0]
+          radius: 0.35
+          innerRadius: 0
+          coneAngle: 45
+          coneHeight: 1
+        positionModifier:
+          fromTime: 0
+          toTime: 0
+          fromPosition: [0, 0, 0]
+          toPosition: [0, 0, 0]
+          function: LINEAR
+        velocityInitializer:
+          minVelocity: [-0.3, 2.4, -0.3]
+          maxVelocity: [0.3, 4.2, 0.3]
+        velocityModifier:
+          fromTime: 0
+          toTime: 0
+          fromVelocity: [0, 0, 0]
+          toVelocity: [0, 0, 0]
+          function: LINEAR
+        accelerationInitializer:
+          minAcceleration: [0, 1, 0]
+          maxAcceleration: [0, 2, 0]
+        accelerationModifier:
+          fromTime: 0
+          toTime: 0
+          fromAcceleration: [0, 0, 0]
+          toAcceleration: [0, 0, 0]
+          function: LINEAR
+        colorInitializer:
+          minColor: [1, 1, 1]
+          maxColor: [1, 1, 1]
+          useSRGB: true
+        colorModifier:
+          fromTime: 0
+          toTime: 0
+          fromColor: [0, 0, 0]
+          toColor: [0, 0, 0]
+          function: LINEAR
+          useSRGB: true
+        colorGradient:
+          useSRGB: true
+          stops:
+            - time: 0
+              color: [1, 0.9, 0.45]
+            - time: 0.5
+              color: [1, 0.48, 0.14]
+            - time: 1
+              color: [0.25, 0.1, 0.05]
+        alphaInitializer:
+          minAlpha: 1
+          maxAlpha: 1
+        alphaModifier:
+          fromTime: 0.2
+          toTime: 0.9
+          fromAlpha: 1
+          toAlpha: 0
+          function: LINEAR
+        sizeInitializer:
+          minSize: 0.9
+          maxSize: 1.6
+        sizeModifier:
+          fromTime: 0
+          toTime: 0.9
+          fromSize: 1.6
+          toSize: 0.4
+          function: QUAD_OUT
+        spriteInitializer:
+          frames: ~
+        spriteModifier:
+          fromTime: 0
+          toTime: 0
+          function: LINEAR
+          frames: ~
+        rotationInitializer:
+          minRotation: [1, 0, 0, 0]
+          maxRotation: [1, 0, 0, 0]
+          shortestPath: false
+        rotationModifier:
+          fromTime: 0
+          toTime: 0
+          fromRotation: [1, 0, 0, 0]
+          toRotation: [1, 0, 0, 0]
+          function: LINEAR
+          shortestPath: false
+        scaleInitializer:
+          minScale: [1, 1, 1]
+          maxScale: [1, 1, 1]
+          linearSort: true
+        scaleModifier:
+          fromTime: 0
+          toTime: 0
+          fromScale: [1, 1, 1]
+          toScale: [1, 1, 1]
+          function: LINEAR
+  - type: Entity
+    entity: 1020
+    name: Emitter
+    components:
+      action:
+        state: Stopped
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1016
+        ownedTarget: false
+      particles:
+        maxParticles: 40
+        emitter: true
+        loop: true
+        localSpace: false
+        rate: 22
+        maxPerUpdate: 64
+        bursts: ~
+        lifeInitializer:
+          minLife: 0.5
+          maxLife: 0.9
+        positionInitializer:
+          shape: Sphere
+          minPosition: [0, 0, 0]
+          maxPosition: [0, 0, 0]
+          radius: 0.35
+          innerRadius: 0
+          coneAngle: 45
+          coneHeight: 1
+        positionModifier:
+          fromTime: 0
+          toTime: 0
+          fromPosition: [0, 0, 0]
+          toPosition: [0, 0, 0]
+          function: LINEAR
+        velocityInitializer:
+          minVelocity: [-0.3, 2.4, -0.3]
+          maxVelocity: [0.3, 4.2, 0.3]
+        velocityModifier:
+          fromTime: 0
+          toTime: 0
+          fromVelocity: [0, 0, 0]
+          toVelocity: [0, 0, 0]
+          function: LINEAR
+        accelerationInitializer:
+          minAcceleration: [0, 1, 0]
+          maxAcceleration: [0, 2, 0]
+        accelerationModifier:
+          fromTime: 0
+          toTime: 0
+          fromAcceleration: [0, 0, 0]
+          toAcceleration: [0, 0, 0]
+          function: LINEAR
+        colorInitializer:
+          minColor: [1, 1, 1]
+          maxColor: [1, 1, 1]
+          useSRGB: true
+        colorModifier:
+          fromTime: 0
+          toTime: 0
+          fromColor: [0, 0, 0]
+          toColor: [0, 0, 0]
+          function: LINEAR
+          useSRGB: true
+        colorGradient:
+          useSRGB: true
+          stops:
+            - time: 0
+              color: [1, 0.9, 0.45]
+            - time: 0.5
+              color: [1, 0.48, 0.14]
+            - time: 1
+              color: [0.25, 0.1, 0.05]
+        alphaInitializer:
+          minAlpha: 1
+          maxAlpha: 1
+        alphaModifier:
+          fromTime: 0.2
+          toTime: 0.9
+          fromAlpha: 1
+          toAlpha: 0
+          function: LINEAR
+        sizeInitializer:
+          minSize: 0.9
+          maxSize: 1.6
+        sizeModifier:
+          fromTime: 0
+          toTime: 0.9
+          fromSize: 1.6
+          toSize: 0.4
+          function: QUAD_OUT
+        spriteInitializer:
+          frames: ~
+        spriteModifier:
+          fromTime: 0
+          toTime: 0
+          function: LINEAR
+          frames: ~
+        rotationInitializer:
+          minRotation: [1, 0, 0, 0]
+          maxRotation: [1, 0, 0, 0]
+          shortestPath: false
+        rotationModifier:
+          fromTime: 0
+          toTime: 0
+          fromRotation: [1, 0, 0, 0]
+          toRotation: [1, 0, 0, 0]
+          function: LINEAR
+          shortestPath: false
+        scaleInitializer:
+          minScale: [1, 1, 1]
+          maxScale: [1, 1, 1]
+          linearSort: true
+        scaleModifier:
+          fromTime: 0
+          toTime: 0
+          fromScale: [1, 1, 1]
+          toScale: [1, 1, 1]
+          function: LINEAR

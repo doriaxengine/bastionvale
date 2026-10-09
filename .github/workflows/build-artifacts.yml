@@ -1,0 +1,29 @@
+name: Build Artifacts
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    uses: doriaxengine/doriax-project-example-ci/.github/workflows/build-project.yml@v2
+    with:
+      title: Bastion Vale
+      subtitle: Build towers along the road and keep the alien raid away from the keep.
+      description: A small 3D tower defence made with Doriax Engine. Alien craft follow the road from a portal to your keep. Build and upgrade ballistas, cannons and frost towers on the pads along the way and hold out through every wave of two levels.
+      controls: |
+        Select a build pad [Left click]
+        Build [1] [2] [3]
+        Upgrade [U]
+        Sell [X]
+        Next wave [Space]
+        Double speed [F]
+        Camera [W] [A] [S] [D] [Q] [E], right drag and wheel
+        Pause [Esc] [P]
+        On phones, tap a pad, drag to move and pinch to zoom

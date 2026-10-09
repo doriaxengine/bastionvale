@@ -1,0 +1,42 @@
+name: BastionVale
+canvasWidth: 1280
+canvasHeight: 720
+scalingMode: fitwidth
+textureStrategy: none
+vsync: true
+windowMode: windowed
+windowWidth: 1280
+windowHeight: 720
+windowResizable: true
+windowTitle: Bastion Vale
+assetsDir: assets
+luaDir: .
+application:
+  name: Bastion Vale
+  identifier: org.doriax.bastionvale
+  version: 1.0.0
+web:
+  hideEmscriptenUI: true
+startSceneId: 325110629
+loading:
+  sceneId: 3418633750
+  delay: 0.4
+  asyncLoading: true
+standaloneBundles:
+  - bundles/Ballista.bundle
+  - bundles/Cannon.bundle
+  - bundles/FrostTower.bundle
+  - bundles/Scout.bundle
+  - bundles/Raider.bundle
+  - bundles/Brute.bundle
+  - bundles/Mothership.bundle
+scenes:
+  - filepath: Green Vale.scene
+  - filepath: Frost Hollow.scene
+  - filepath: HUD Scene.scene
+  - filepath: Pause Scene.scene
+  - filepath: Victory Scene.scene
+  - filepath: Defeat Scene.scene
+  - filepath: Intro Scene.scene
+  - filepath: Title Menu.scene
+  - filepath: Loading Scene.scene

@@ -1,0 +1,1019 @@
+type: EntityBundle
+members:
+  - type: Entity
+    entity: 1001
+    name: Mothership
+    components:
+      transform:
+        position: [0, 0, 0]
+        rotation: [1, 0, 0, 0]
+        scale: [1, 1, 1]
+        worldPosition: [38, 5.8, -10]
+        worldRotation: [1, 0, 0, 0]
+        worldScale: [1, 1, 1]
+        localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 5.8, -10, 1]]
+        modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 5.8, -10, 1]]
+        normalMatrix: [[1, 0, 0, -38], [0, 1, 0, -5.8], [0, -0, 1, 10], [0, 0, 0, 1]]
+        visible: true
+        billboardRotation: [1, 0, 0, 0]
+        billboard: false
+        fakeBillboard: false
+        cylindricalBillboard: false
+      script:
+        scripts:
+          - type: lua
+            path: scripts/Enemy.lua
+            className: Enemy
+            enabled: true
+            properties:
+              - name: health
+                displayName: Health
+                type: Float
+                value: 1250
+                defaultValue: 60
+              - name: speed
+                displayName: Speed
+                type: Float
+                value: 2.3
+                defaultValue: 5
+              - name: reward
+                displayName: Reward
+                type: Int
+                value: 95
+                defaultValue: 8
+              - name: damage
+                displayName: Damage
+                type: Int
+                value: 5
+                defaultValue: 1
+              - name: hoverHeight
+                displayName: Hover Height
+                type: Float
+                value: 2.8
+                defaultValue: 2.8
+              - name: hull
+                displayName: Hull
+                type: EntityReference
+                ptrTypeName: Model
+                value: 1002
+                defaultValue: 0
+              - name: healthBar
+                displayName: Health Bar
+                type: EntityReference
+                ptrTypeName: Object
+                value: 1005
+                defaultValue: 0
+              - name: healthFill
+                displayName: Health Fill
+                type: EntityReference
+                ptrTypeName: Mesh
+                value: 1007
+                defaultValue: 0
+              - name: explosion
+                displayName: Explosion
+                type: EntityReference
+                ptrTypeName: Particles
+                value: 1010
+                defaultValue: 0
+    children:
+      - type: Entity
+        entity: 1002
+        name: Hull
+        components:
+          transform:
+            position: [0, 0, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [4.8, 4.8, 4.8]
+            worldPosition: [38, 5.8, -10]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [4.8, 4.8, 4.8]
+            localMatrix: [[4.8, 0, 0, 0], [0, 4.8, 0, 0], [0, 0, 4.8, 0], [0, 0, 0, 1]]
+            modelMatrix: [[4.8, 0, 0, 0], [0, 4.8, 0, 0], [0, 0, 4.8, 0], [38, 5.8, -10, 1]]
+            normalMatrix: [[0.20833331, 0, 0, -7.9166665], [0, 0.20833331, 0, -1.2083334], [0, -0, 0.20833331, 2.0833333], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          mesh:
+            submeshes: ~
+            normAdjustJoint: 1
+            normAdjustWeight: 1
+            aabb:
+              min: [0, 0, 0]
+              max: [0, 0, 0]
+            verticesAABB:
+              min: [0, 0, 0]
+              max: [0, 0, 0]
+            worldAABB:
+              min: [38, 5.8, -10]
+              max: [38, 5.8, -10]
+            receiveLights: true
+            receiveIBL: false
+            castShadows: true
+            receiveShadows: true
+            lodEnabled: true
+            lodBias: 1
+            renderInReflectionProbes: true
+            shadowsBillboard: true
+            transparent: false
+            cullingMode: back
+            windingOrder: ccw
+          model:
+            filename: models/td/enemy-ufo-d-weapon.glb
+            skeleton: 0
+            meshNodesMapping:
+              - node: 0
+                entity: 1003
+              - node: 1
+                entity: 1004
+        children:
+          - type: Entity
+            entity: 1003
+            name: enemy-ufo-d-weapon
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [38, 5.8, -10]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [4.8, 4.8, 4.8]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                modelMatrix: [[4.8, 0, 0, 0], [0, 4.8, 0, 0], [0, 0, 4.8, 0], [38, 5.8, -10, 1]]
+                normalMatrix: [[0.20833331, 0, 0, -7.9166665], [0, 0.20833331, 0, -1.2083334], [0, -0, 0.20833331, 2.0833333], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/enemy-ufo-d-weapon.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 2316
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.4746912, 0, -0.47499996]
+                  max: [0.4746912, 0.5923333, 0.47499996]
+                verticesAABB:
+                  min: [-0.4746912, 0, -0.47499996]
+                  max: [0.4746912, 0.5923333, 0.47499996]
+                worldAABB:
+                  min: [35.72148, 5.8, -12.28]
+                  max: [40.27852, 8.6432, -7.7200003]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+          - type: Entity
+            entity: 1004
+            name: arrow
+            components:
+              transform:
+                position: [0, 0.57, -0.0084]
+                rotation: [1, 0, 0, 0]
+                scale: [1, 1, 1]
+                worldPosition: [38, 8.536, -10.04032]
+                worldRotation: [1, 0, 0, 0]
+                worldScale: [4.8, 4.8, 4.8]
+                localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0.57, -0.0084, 1]]
+                modelMatrix: [[4.8, 0, 0, 0], [0, 4.8, 0, 0], [0, 0, 4.8, 0], [38, 8.536, -10.04032, 1]]
+                normalMatrix: [[0.20833331, 0, 0, -7.9166665], [0, 0.20833331, 0, -1.7783332], [0, -0, 0.20833331, 2.0917332], [0, 0, 0, 1]]
+                visible: true
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                submeshes:
+                  - material:
+                      baseColorFactor: [1, 1, 1, 1]
+                      metallicFactor: 0
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: ALPHA_OPAQUE
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexture:
+                        textureType: 2D
+                        source: id
+                        id: models/td/enemy-ufo-d-weapon.glb|gltf-image|0|s0
+                        minFilter: nearest_mipmap_nearest
+                        magFilter: nearest
+                        wrapU: repeat
+                        wrapV: repeat
+                        releaseDataAfterLoad: true
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 672
+                    faceCulling: false
+                    textureShadow: false
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: true
+                    hasVertexColor3: false
+                    hasVertexColor4: false
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.2484959, -0.067499995, -0.21660018]
+                  max: [0.2484959, 0.0675, 0.3665998]
+                verticesAABB:
+                  min: [-0.2484959, -0.067499995, -0.21660018]
+                  max: [0.2484959, 0.0675, 0.3665998]
+                worldAABB:
+                  min: [36.80722, 8.212, -11.080002]
+                  max: [39.19278, 8.860001, -8.280642]
+                receiveLights: true
+                receiveIBL: false
+                castShadows: true
+                receiveShadows: true
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+      - type: Entity
+        entity: 1005
+        name: Health Bar
+        components:
+          transform:
+            position: [0, 4.472, 0]
+            rotation: [0.8249827, -0.14484693, -0.522154, 0.16055553]
+            scale: [1, 1, 1]
+            worldPosition: [38, 10.272, -10]
+            worldRotation: [0.8249827, -0.14484693, -0.522154, 0.16055553]
+            worldScale: [1, 1, 1]
+            localMatrix: [[0.4031543, 0.41617584, 0.815024, 0], [-0.113646254, 0.9064826, -0.40666184, 0], [-0.9080479, 0.07132301, 0.41274923, 0], [0, 4.472, 0, 1]]
+            modelMatrix: [[0.4031543, 0.41617584, 0.815024, 0], [-0.113646254, 0.9064826, -0.40666184, 0], [-0.9080479, 0.07132301, 0.41274923, 0], [38, 10.272, -10, 1]]
+            normalMatrix: [[0.40315437, 0.4161759, 0.81502414, -11.444584], [-0.11364631, 0.9064826, -0.40666184, -9.059447], [-0.90804803, 0.07132306, 0.41274923, 37.900684], [0, -0, 0, 1]]
+            visible: false
+            billboardRotation: [1, 0, 0, 0]
+            billboard: true
+            fakeBillboard: false
+            cylindricalBillboard: false
+        children:
+          - type: Entity
+            entity: 1006
+            name: Back
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [3.56, 0.42, 0.06]
+                worldPosition: [38, 10.272, -10]
+                worldRotation: [0.8249827, -0.14484693, -0.522154, 0.16055553]
+                worldScale: [3.56, 0.42, 0.06]
+                localMatrix: [[3.56, 0, 0, 0], [0, 0.42, 0, 0], [0, 0, 0.06, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1.4352293, 1.481586, 2.9014854, 0], [-0.047731426, 0.38072267, -0.17079797, 0], [-0.054482874, 0.00427938, 0.024764953, 0], [38, 10.272, -10, 1]]
+                normalMatrix: [[0.11324561, 0.116903335, 0.22893934, -3.214771], [-0.27058643, 2.1582918, -0.9682424, -21.570112], [-15.134133, 1.1887175, 6.8791537, 631.6781], [0, -0, 0, 1]]
+                visible: false
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                buffer:
+                  type: vertex_buffer
+                  usage: immutable
+                  stride: 48
+                  size: 1152
+                  count: 24
+                  renderAttributes: true
+                  instanceBuffer: false
+                  attributes:
+                    - type: position
+                      dataType: float
+                      bufferName: ""
+                      elements: 3
+                      offset: 0
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                    - type: texcoord1
+                      dataType: float
+                      bufferName: ""
+                      elements: 2
+                      offset: 12
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                    - type: normal
+                      dataType: float
+                      bufferName: ""
+                      elements: 3
+                      offset: 20
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                    - type: color
+                      dataType: float
+                      bufferName: ""
+                      elements: 4
+                      offset: 32
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                  data: AAAAvwAAAL8AAAA/AAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAA/AACAPwAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAC/AAAAAAAAgD8AAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAC/AACAPwAAgD8AAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAC/AACAPwAAAAAAAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAC/AAAAAAAAAAAAAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAA/AAAAAAAAgD8AAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAC/AACAPwAAAAAAAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAC/AACAPwAAgD8AAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAC/AACAPwAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAC/AACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAA/AACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAC/AACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAC/AAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAA/AAAAAAAAAAAAAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAA/AACAPwAAAAAAAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAC/AACAPwAAgD8AAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAC/AAAAAAAAgD8AAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/
+                  vertexSize: 48
+                indices:
+                  type: index_buffer
+                  usage: immutable
+                  stride: 2
+                  size: 72
+                  count: 36
+                  renderAttributes: true
+                  instanceBuffer: false
+                  attributes:
+                    - type: index
+                      dataType: unsigned_short
+                      bufferName: ""
+                      elements: 1
+                      offset: 0
+                      count: 36
+                      normalized: true
+                      perInstance: false
+                  data: AAABAAIAAAACAAMABAAGAAUABAAHAAYACAAJAAoACAAKAAsADAAOAA0ADAAPAA4AEAARABIAEAASABMAFAAWABUAFAAXABYA
+                eBuffers: ~
+                submeshes:
+                  - material:
+                      baseColorFactor: [0.1, 0.08, 0.07, 1]
+                      metallicFactor: 1
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: AUTO
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 36
+                    faceCulling: true
+                    textureShadow: false
+                    overrideFields: 1
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: false
+                    hasVertexColor3: false
+                    hasVertexColor4: true
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                bonesMatrix:
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.5, -0.5, -0.5]
+                  max: [0.5, 0.5, 0.5]
+                verticesAABB:
+                  min: [-0.5, -0.5, -0.5]
+                  max: [0.5, 0.5, 0.5]
+                worldAABB:
+                  min: [37.231277, 9.338706, -11.548524]
+                  max: [38.768723, 11.205295, -8.451476]
+                receiveLights: false
+                receiveIBL: false
+                castShadows: false
+                receiveShadows: false
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+          - type: Entity
+            entity: 1007
+            name: Fill
+            components:
+              transform:
+                position: [0, 0, 0]
+                rotation: [1, 0, 0, 0]
+                scale: [3.4, 0.28, 0.12]
+                worldPosition: [38, 10.272, -10]
+                worldRotation: [0.8249827, -0.14484693, -0.522154, 0.16055553]
+                worldScale: [3.4, 0.28, 0.12]
+                localMatrix: [[3.4, 0, 0, 0], [0, 0.28, 0, 0], [0, 0, 0.12, 0], [0, 0, 0, 1]]
+                modelMatrix: [[1.3707247, 1.4149979, 2.7710817, 0], [-0.031820953, 0.2538151, -0.113865316, 0], [-0.10896575, 0.00855876, 0.049529906, 0], [38, 10.272, -10, 1]]
+                normalMatrix: [[0.118574806, 0.12240467, 0.23971294, -3.366054], [-0.40587968, 3.2374377, -1.4523636, -32.355167], [-7.5670667, 0.5943587, 3.4395766, 315.83905], [0, -0, 0, 1]]
+                visible: false
+                billboardRotation: [1, 0, 0, 0]
+                billboard: false
+                fakeBillboard: false
+                cylindricalBillboard: false
+              mesh:
+                buffer:
+                  type: vertex_buffer
+                  usage: immutable
+                  stride: 48
+                  size: 1152
+                  count: 24
+                  renderAttributes: true
+                  instanceBuffer: false
+                  attributes:
+                    - type: position
+                      dataType: float
+                      bufferName: ""
+                      elements: 3
+                      offset: 0
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                    - type: texcoord1
+                      dataType: float
+                      bufferName: ""
+                      elements: 2
+                      offset: 12
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                    - type: normal
+                      dataType: float
+                      bufferName: ""
+                      elements: 3
+                      offset: 20
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                    - type: color
+                      dataType: float
+                      bufferName: ""
+                      elements: 4
+                      offset: 32
+                      count: 24
+                      normalized: true
+                      perInstance: false
+                  data: AAAAvwAAAL8AAAA/AAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAA/AACAPwAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAC/AAAAAAAAgD8AAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAC/AACAPwAAgD8AAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAC/AACAPwAAAAAAAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAC/AAAAAAAAAAAAAAAAAAAAAAAAgL8AAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAA/AAAAAAAAgD8AAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAC/AACAPwAAAAAAAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAC/AACAPwAAgD8AAIC/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAC/AACAPwAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAC/AACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAA/AACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAD8AAAC/AACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAD8AAAC/AAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAA/AAAAAAAAAAAAAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAA/AACAPwAAAAAAAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAPwAAAL8AAAC/AACAPwAAgD8AAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAvwAAAL8AAAC/AAAAAAAAgD8AAAAAAACAvwAAAAAAAIA/AACAPwAAgD8AAIA/
+                  vertexSize: 48
+                indices:
+                  type: index_buffer
+                  usage: immutable
+                  stride: 2
+                  size: 72
+                  count: 36
+                  renderAttributes: true
+                  instanceBuffer: false
+                  attributes:
+                    - type: index
+                      dataType: unsigned_short
+                      bufferName: ""
+                      elements: 1
+                      offset: 0
+                      count: 36
+                      normalized: true
+                      perInstance: false
+                  data: AAABAAIAAAACAAMABAAGAAUABAAHAAYACAAJAAoACAAKAAsADAAOAA0ADAAPAA4AEAARABIAEAASABMAFAAWABUAFAAXABYA
+                eBuffers: ~
+                submeshes:
+                  - material:
+                      baseColorFactor: [0.3, 0.85, 0.25, 1]
+                      metallicFactor: 1
+                      roughnessFactor: 1
+                      alphaCutoff: 0.5
+                      foliageTransmission: 0
+                      alphaMode: AUTO
+                      emissiveFactor: [0, 0, 0]
+                      baseColorTexCoord: 0
+                      metallicRoughnessTexCoord: 0
+                      occlusionTexCoord: 0
+                      emissiveTexCoord: 0
+                      normalTexCoord: 0
+                      name: ""
+                    textureRect: [0, 0, 1, 1]
+                    primitiveType: triangles
+                    vertexCount: 36
+                    faceCulling: true
+                    textureShadow: false
+                    overrideFields: 1
+                    hasTexCoord1: true
+                    hasTexCoord2: false
+                    hasNormalMap: false
+                    hasTangent: false
+                    hasVertexColor3: false
+                    hasVertexColor4: true
+                    hasTextureRect: false
+                    hasSkinning: false
+                    hasMorphTarget: false
+                    hasMorphNormal: false
+                    hasMorphTangent: false
+                bonesMatrix:
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                  - [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+                normAdjustJoint: 1
+                normAdjustWeight: 1
+                aabb:
+                  min: [-0.5, -0.5, -0.5]
+                  max: [0.5, 0.5, 0.5]
+                verticesAABB:
+                  min: [-0.5, -0.5, -0.5]
+                  max: [0.5, 0.5, 0.5]
+                worldAABB:
+                  min: [37.244244, 9.433314, -11.467238]
+                  max: [38.755756, 11.110686, -8.532762]
+                receiveLights: false
+                receiveIBL: false
+                castShadows: false
+                receiveShadows: false
+                lodEnabled: true
+                lodBias: 1
+                renderInReflectionProbes: true
+                shadowsBillboard: true
+                transparent: false
+                cullingMode: back
+                windingOrder: ccw
+      - type: Entity
+        entity: 1008
+        name: Explosion
+        components:
+          transform:
+            position: [0, 1, 0]
+            rotation: [1, 0, 0, 0]
+            scale: [1, 1, 1]
+            worldPosition: [38, 6.8, -10]
+            worldRotation: [1, 0, 0, 0]
+            worldScale: [1, 1, 1]
+            localMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]]
+            modelMatrix: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [38, 6.8, -10, 1]]
+            normalMatrix: [[1, 0, 0, -38], [0, 1, 0, -6.8], [0, -0, 1, 10], [0, 0, 0, 1]]
+            visible: true
+            billboardRotation: [1, 0, 0, 0]
+            billboard: false
+            fakeBillboard: false
+            cylindricalBillboard: false
+          points:
+            maxPoints: 40
+            transparent: true
+            autoTransparency: true
+            texture:
+              textureType: 2D
+              source: path
+              path: particles/smoke_08.png
+              minFilter: linear
+              magFilter: linear
+              wrapU: repeat
+              wrapV: repeat
+              releaseDataAfterLoad: true
+            points: ~
+  - type: Entity
+    entity: 1009
+    name: Hover
+    components:
+      action:
+        state: Running
+        speed: 1
+        startOffset: 0
+        randomStart: true
+        target: 1002
+        ownedTarget: false
+      timedaction:
+        duration: 1.3
+        loop: true
+        pingPong: true
+        function: SINE_IN_OUT
+      positionaction:
+        endPosition: [0, 0.6, 0]
+        startPosition: [0, 0, 0]
+  - type: Entity
+    entity: 1010
+    name: Explosion Burst
+    components:
+      action:
+        state: Stopped
+        speed: 1
+        startOffset: 0
+        randomStart: false
+        target: 1008
+        ownedTarget: false
+      particles:
+        maxParticles: 40
+        emitter: true
+        loop: false
+        localSpace: false
+        rate: 0
+        maxPerUpdate: 100
+        bursts:
+          - time: 0
+            minCount: 26
+            maxCount: 34
+        lifeInitializer:
+          minLife: 0.45
+          maxLife: 0.95
+        positionInitializer:
+          shape: Sphere
+          minPosition: [0, 0, 0]
+          maxPosition: [0, 0, 0]
+          radius: 1.4
+          innerRadius: 0
+          coneAngle: 30
+          coneHeight: 1
+        positionModifier:
+          fromTime: 0
+          toTime: 0
+          fromPosition: [0, 0, 0]
+          toPosition: [0, 0, 0]
+          function: LINEAR
+        velocityInitializer:
+          minVelocity: [-6, 1, -6]
+          maxVelocity: [6, 9, 6]
+        velocityModifier:
+          fromTime: 0
+          toTime: 0
+          fromVelocity: [0, 0, 0]
+          toVelocity: [0, 0, 0]
+          function: LINEAR
+        accelerationInitializer:
+          minAcceleration: [0, -3, 0]
+          maxAcceleration: [0, 1, 0]
+        accelerationModifier:
+          fromTime: 0
+          toTime: 0
+          fromAcceleration: [0, 0, 0]
+          toAcceleration: [0, 0, 0]
+          function: LINEAR
+        colorInitializer:
+          minColor: [1, 1, 1]
+          maxColor: [1, 1, 1]
+          useSRGB: true
+        colorModifier:
+          fromTime: 0
+          toTime: 0
+          fromColor: [0, 0, 0]
+          toColor: [0, 0, 0]
+          function: LINEAR
+          useSRGB: true
+        colorGradient:
+          useSRGB: true
+          stops:
+            - time: 0
+              color: [1, 0.92, 0.55]
+            - time: 0.35
+              color: [1, 0.45, 0.12]
+            - time: 1
+              color: [0.2, 0.18, 0.18]
+        alphaInitializer:
+          minAlpha: 1
+          maxAlpha: 1
+        alphaModifier:
+          fromTime: 0.18
+          toTime: 0.95
+          fromAlpha: 1
+          toAlpha: 0
+          function: LINEAR
+        sizeInitializer:
+          minSize: 5.04
+          maxSize: 9
+        sizeModifier:
+          fromTime: 0
+          toTime: 0.95
+          fromSize: 4.5
+          toSize: 14.4
+          function: LINEAR
+        spriteInitializer:
+          frames: ~
+        spriteModifier:
+          fromTime: 0
+          toTime: 0
+          function: LINEAR
+          frames: ~
+        rotationInitializer:
+          minRotation: [1, 0, 0, 0]
+          maxRotation: [1, 0, 0, 0]
+          shortestPath: false
+        rotationModifier:
+          fromTime: 0
+          toTime: 0
+          fromRotation: [1, 0, 0, 0]
+          toRotation: [1, 0, 0, 0]
+          function: LINEAR
+          shortestPath: false
+        scaleInitializer:
+          minScale: [1, 1, 1]
+          maxScale: [1, 1, 1]
+          linearSort: true
+        scaleModifier:
+          fromTime: 0
+          toTime: 0
+          fromScale: [1, 1, 1]
+          toScale: [1, 1, 1]
+          function: LINEAR
