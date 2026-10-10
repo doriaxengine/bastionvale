@@ -86,7 +86,7 @@ function CameraRig:onUpdate()
             local mouse = Input.getMousePosition()
             local scale = self:dragScale()
             right = right - (mouse.x - self.dragX) * scale
-            forward = forward - (mouse.y - self.dragY) * scale
+            forward = forward + (mouse.y - self.dragY) * scale
             self.dragX, self.dragY = mouse.x, mouse.y
         end
         if right ~= 0 or forward ~= 0 then
@@ -141,7 +141,7 @@ function CameraRig:onTouchMove(pointer, x, y)
         end
         if touch.moved then
             local scale = self:dragScale()
-            self:pan(-(x - touch.x) * scale, -(y - touch.y) * scale)
+            self:pan(-(x - touch.x) * scale, (y - touch.y) * scale)
         end
     else
         touch.moved = true
