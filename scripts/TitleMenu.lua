@@ -10,8 +10,8 @@ local TitleMenu = {
 
 function TitleMenu:init()
     GameState.clear()
-    -- a browser tab has nothing to quit to
-    if self.quitButton and Engine.platform == Platform.Web then
+    -- a browser tab has nothing to quit to, and iOS apps don't close themselves
+    if self.quitButton and (Engine.platform == Platform.Web or Engine.platform == Platform.iOS) then
         self.quitButton.visible = false
     end
     RegisterEngineEvent(self, "onKeyDown")
