@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    uses: doriaxengine/doriax-project-example-ci/.github/workflows/build-project.yml@v2
+    uses: doriaxengine/doriax-project-example-ci/.github/workflows/build-project.yml@v3
     with:
       title: Bastion Vale
       subtitle: Build towers along the road and keep the alien raid away from the keep.
